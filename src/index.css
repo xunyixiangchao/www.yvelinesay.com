@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css?family=Meera+Inimai|Sacramento|Unica+One');
+
+html {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  font-family: 'Meera Inimai', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}

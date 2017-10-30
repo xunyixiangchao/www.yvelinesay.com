@@ -1,0 +1,29 @@
+.BasicInfoContent {
+  width: 100%;
+  background-color: rgb(250,250,250);
+}
+
+.BasicInfo {
+  max-width: 80%;
+  height: 90vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.basicInfoGreeting {
+  font-size: 60px;
+  text-align: center;
+  font-family: 'Sacramento', cursive;
+}
+
+.basicInfoP {
+  position: absolute;
+  bottom: 20px;
+  right: 0px;
+  font-family: 'Sacramento', cursive;
+  color: #97A4A8;
+  font-size: 27px;
+}

@@ -1,0 +1,26 @@
+.BrandStatementContainer {
+  width: 100%;
+  background-color: white;
+}
+
+.BrandStatement {
+  max-width: 80%;
+  min-height: 60vh;
+  padding: 50px 0;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.majLetter {
+  font-family: 'Sacramento', cursive;
+  font-size: 40px;
+}
+
+.brandStatementP {
+  max-width: 500px;
+  text-align: justify;
+  margin: 0 auto;
+  line-height: 35px;
+}

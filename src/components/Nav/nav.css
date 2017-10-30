@@ -1,0 +1,12 @@
+.Nav {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 40%;
+  left: 5px;
+  z-index: 2;
+}
+
+.navItem {
+  margin: 3px 0;
+}

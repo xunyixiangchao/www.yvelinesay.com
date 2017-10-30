@@ -1,0 +1,21 @@
+.NavBar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgba(255,255,255,.5);
+  height: 10vh;
+}
+
+.navItem {
+  margin: 3px 0;
+  font-family: 'Unica One', cursive;
+}
+
+a {
+  text-decoration: none;
+  color: #C6CDCF;
+}
+
+a:hover {
+  color: #97A4A8;
+}

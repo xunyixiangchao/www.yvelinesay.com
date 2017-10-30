@@ -1,0 +1,13 @@
+.FooterContainer {
+  width: 100%;
+  background-color: white;
+  padding-top: 13vh;
+}
+
+.Footer {
+  max-width: 80%;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}

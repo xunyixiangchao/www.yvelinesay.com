@@ -1,0 +1,47 @@
+.BoxContainer {
+  width: 100%;
+}
+
+.Box {
+  max-width: 350px;
+  margin: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 10px;
+  border: 3px solid white;
+  border-radius: 10px;
+}
+
+.BoxTitle {
+  font-size: 30px;
+  position: absolute;
+  top:10px;
+  font-family: 'Unica One', cursive;
+}
+
+.skillContainer {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-top: 40px;
+}
+
+  .skill {
+    margin: 15px;
+  }
+
+    .skillTitle {
+      text-align: center;
+      font-family: 'Unica One', cursive;
+      color: #97A4A8;
+    }
+
+    .imgSkill {
+      max-width: 80px;
+      max-height: 80px;
+    }
