@@ -8,8 +8,8 @@ class BrandStatement extends Component {
         <div className="BrandStatement">
           <p  className="brandStatementP">
 
-            <span className="majLetter">M</span>y admiration for technical skills associated with
-            a creative spirit and a logical personnality have led me to a develop a passion for coding.<br />
+            <span className="majLetter">M</span>y admiration for technical skills associated,  my
+            creative spirit and detail-oriented personnality have led me to a develop a passion for coding.<br />
 
             <span className="majLetter">A</span>s a previous Property Manager in Corporate Real Estate field,
             coding helped me realize that intellectual challenges were making me feel more satisfied

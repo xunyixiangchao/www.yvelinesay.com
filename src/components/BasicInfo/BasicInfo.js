@@ -43,7 +43,7 @@ class BasicInfo extends Component {
           </div>
           <Clock />
           <div className='basicInfoP'>
-            I am Yveline, a passionnated React front-end developer.
+            I am Yveline,  a passionate React Front-end Developer.
           </div>
         </div>
       </div>

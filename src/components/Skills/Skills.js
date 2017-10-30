@@ -10,8 +10,8 @@ class Skills extends Component {
     this.state = {
       skillsF:["React JS", "jQuery", "JavaScript", "CSS", "HTML"],
       imagesF:["./images/React.png", "./images/jquery.png", "./images/JS.png", "./images/css.png", "./images/html.png"],
-      skillsB:["Node JS", "NPM", "RESTful API", "PSQL"],
-      imagesB:["./images/nodejs1.png", "./images/npm.png", "./images/restapi.png", "./images/psql.png"]
+      skillsB:["Node JS", "Express JS", "RESTful API", "PSQL"],
+      imagesB:["./images/nodejs1.png", "./images/express.png", "./images/restapi.png", "./images/psql.png"]
     }
 
   }
