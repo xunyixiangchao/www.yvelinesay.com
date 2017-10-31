@@ -5,10 +5,12 @@ class NavBar extends Component {
   render() {
     return (
       <div className="NavBar">
-        <div className="navItem"><a href="">About Me</a></div>
-        <div className="navItem"><a href="">Skills</a></div>
-        <div className="navItem"><a href="">Projects</a></div>
-        <div className="navItem"><a href="">Contact</a></div>
+        <div className="NavBarContainer">
+          <div className="navItem"><a href="">About Me</a></div>
+          <div className="navItem"><a href="">Skills</a></div>
+          <div className="navItem"><a href="">Projects</a></div>
+          <div className="navItem"><a href="">Contact</a></div>
+          </div>
       </div>
     );
   }

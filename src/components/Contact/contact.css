@@ -9,13 +9,13 @@
 }
 
 .Contact {
-  max-width: 850px;
+  max-width: 78%;
   width: 100%;
   margin: 0 auto;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .contactIcon {
-  width: 60px;
+  width: 50px;
 }

@@ -4,7 +4,7 @@
 }
 
 .BrandStatement {
-  max-width: 80%;
+  max-width: 78%;
   min-height: 60vh;
   padding: 50px 0;
   margin: 0 auto;
@@ -19,8 +19,20 @@
 }
 
 .brandStatementP {
-  max-width: 500px;
+  width: 100%;
   text-align: justify;
   margin: 0 auto;
   line-height: 35px;
+}
+
+.mymotto {
+  text-align: center;
+  color: #C6CDCF;
+  font-size: 15px;
+  margin-top: 40px;
+}
+
+.motto {
+  text-align: center;
+  margin: 0;
 }

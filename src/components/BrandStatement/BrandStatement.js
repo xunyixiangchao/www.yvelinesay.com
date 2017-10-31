@@ -6,17 +6,18 @@ class BrandStatement extends Component {
     return (
       <div className="BrandStatementContainer">
         <div className="BrandStatement">
-          <p  className="brandStatementP">
-
-            <span className="majLetter">M</span>y admiration for technical skills associated with  my
-            creative spirit and detail-oriented personnality have led me to a develop a passion for coding.<br />
-
-            <span className="majLetter">A</span>s a previous Property Manager in Corporate Real Estate field,
-            coding helped me realize that intellectual challenges were making me feel more satisfied
-            in my personal and professional everyday life.<br />
-
-            <span className="majLetter">A</span>fter an honest retrospection and analysis, I decided to follow
-            my dreams and change carrier: becoming a <span className="majLetter">W</span>eb <span className="majLetter">D</span>eveloper.
+          <p className="brandStatementP">
+            <span className="majLetter">M</span>y background in corporate real estate strategy and team management has taught me how
+              to be focused, organized and to work with others. My fascination for technical skills, and more specifically for logical
+              problem solving, lead me to changing careers and becoming a web developer. I am described by others as determined,
+              fast-learner and lively minded. I am someone with a strong desire for a challenge, who does what she is passionate about
+              with a lot of motivation and precision.
+          </p>
+          <p className="mymotto">
+            My motto?
+          </p>
+          <p className="motto">
+            <span className="majLetter">A</span>nything in life can be reached with work, patience, collaboration and positive energy.
           </p>
         </div>
       </div>

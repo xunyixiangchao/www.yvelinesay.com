@@ -33,6 +33,14 @@ class Projects extends Component {
             image="./images/flyhigh.png"
           />
 
+          <Project
+            title="Git Hired"
+            description="Nanani"
+            linkToGit="https://github.com/rohara-gleveline"
+            linkToWeb="http://githiredpotoo.surge.sh/"
+            image="./images/githired.png"
+          />
+
         </div>
     </div>
     );
