@@ -25,6 +25,7 @@
 
 .ProjectText {
   display: none;
+  position: relative;
 }
 
     .title {
@@ -38,9 +39,20 @@
       align-items: center;
     }
 
-    .description {
+    .technology {
       padding: 25px;
-      font-size: 14px;
+      font-size: 13px;
+      text-align: justify;
+      position: absolute;
+      top: 7%;
+      color: #97A4A8;
+    }
+
+    .description {
+      margin-top: 10%;
+      padding: 25px;
+      font-size: 15px;
+      text-align: justify;
     }
 
     .links {
