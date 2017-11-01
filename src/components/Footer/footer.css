@@ -24,3 +24,8 @@ p {
 .heartfooter {
   color: #F0B9AD;
 }
+
+.githublinkfooter {
+  text-decoration: none;
+  color: #F0B9AD;
+}
