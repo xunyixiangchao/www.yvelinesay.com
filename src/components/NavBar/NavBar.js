@@ -12,10 +12,10 @@ class NavBar extends Component {
     return (
       <div className="NavBar">
         <div className="NavBarContainer">
-          <div className="navItem"><a href="">About Me</a></div>
-          <div className="navItem"><a href="">Skills</a></div>
-          <div className="navItem"><a href="">Projects</a></div>
-          <div className="navItem"><a href="">Contact</a></div>
+          <div className="navItem"><a href=".BasicInfoContent">About Me</a></div>
+          <div className="navItem"><a href=".SkillsContainer">Skills</a></div>
+          <div className="navItem"><a href=".ProjectsContainer">Projects</a></div>
+          <div className="navItem"><a href=".ContactContainer">Contact</a></div>
           </div>
       </div>
     );

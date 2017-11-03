@@ -1,5 +1,8 @@
 .NavBar {
   width: 100%;
+  position: absolute;
+  top: 90vh;
+  background-color: rgba(255,255,255,.5);
 }
 
 .NavBarContainer {
@@ -8,7 +11,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgba(255,255,255,.5);
   height: 10vh;
 }
 
@@ -19,7 +21,7 @@
 
 a {
   text-decoration: none;
-  color: #C6CDCF;
+  color: black;
 }
 
 a:hover {

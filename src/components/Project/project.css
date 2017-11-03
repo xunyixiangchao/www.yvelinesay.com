@@ -33,9 +33,9 @@
     .title {
       padding-left: 10px;
       font-family: 'Unica One', cursive;
-      font-size: 14px;
+      font-size: 18px;
       width: math(100%-10px);
-      height: 10%;
+      height: 50px;
       background-color: white;
       display: flex;
       justify-content: space-between;
@@ -44,8 +44,8 @@
     }
 
             .skilltechno {
-              max-width: 30px;
-              max-height: 30px;
+              max-width: 35px;
+              max-height: 35px;
             }
 
     .description {
