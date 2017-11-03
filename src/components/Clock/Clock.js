@@ -13,7 +13,6 @@ class Clock extends Component {
     }
 
     this.setClockHands = this.setClockHands.bind(this);
-    this.setClockHands = this.setClockHands.bind(this);
   }
 
   setClockHands() {

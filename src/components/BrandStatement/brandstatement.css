@@ -25,14 +25,33 @@
   line-height: 35px;
 }
 
-.mymotto {
+.brandStatementMotto {
   text-align: center;
-  color: #C6CDCF;
   font-size: 15px;
-  margin-top: 40px;
+  margin-top: 25px;
 }
 
-.motto {
-  text-align: center;
-  margin: 0;
+@media screen and (max-width: 850px) {
+  .BrandStatement {
+    max-width: 100%;
+    padding: 20px 10px;
+  }
+
+  .majLetter {
+    font-size: 35px;
+  }
+
+  .brandStatementP {
+    width: 100%;
+    text-align: justify;
+    margin: 0 auto;
+    line-height: 25px;
+  }
+
+  .brandStatementMotto {
+    text-align: center;
+    font-size: 15px;
+    margin-top: 25px;
+    line-height: 25px;
+  }
 }

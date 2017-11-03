@@ -8,10 +8,10 @@ class Skills extends Component {
     super(props);
 
     this.state = {
-      skillsF:["React JS", "jQuery", "JavaScript", "CSS", "HTML"],
-      imagesF:["./images/React.png", "./images/jquery.png", "./images/JS.png", "./images/css.png", "./images/html.png"],
+      skillsF:["React JS", "jQuery", "JavaScript", "Ruby", "CSS", "HTML"],
+      imagesF:["react", "jquery", "JS", "ruby", "css", "html"],
       skillsB:["Node JS", "Express JS", "RESTful API", "PSQL"],
-      imagesB:["./images/nodejs1.png", "./images/express.png", "./images/restapi.png", "./images/psql.png"]
+      imagesB:["nodejs1", "express", "restapi", "psql"]
     }
 
   }

@@ -5,8 +5,21 @@
 }
 
 .Projects {
-  width: 100%;
+  max-width: 78%;
   margin: 0 auto;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 850px) {
+  .Projects {
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .Projects {
+    flex-direction: column;
+  }
 }

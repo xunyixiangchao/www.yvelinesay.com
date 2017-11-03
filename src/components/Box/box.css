@@ -3,7 +3,7 @@
 }
 
 .Box {
-  max-width: 45%;
+  width: 49%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -23,24 +23,100 @@
 
 .skillContainer {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   text-align: center;
   flex-wrap: wrap;
   align-items: center;
-  padding-top: 40px;
+  margin-top: 20%;
 }
 
   .skill {
     margin: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
     .skillTitle {
+      font-size: 20px;
       text-align: center;
       font-family: 'Unica One', cursive;
       color: #97A4A8;
     }
 
     .imgSkill {
-      max-width: 80px;
-      max-height: 80px;
+      width: 100px;
+      min-height: 50px;
+      height: 120px;
+      background-repeat: no-repeat;
+      background-size: 100%;
     }
+
+        .react {
+          background-image: url("/images/react.png");
+        }
+
+        .jquery {
+          background-image: url("/images/jquery.png");
+        }
+
+        .JS {
+          background-image: url("/images/JS.png");
+        }
+
+        .ruby {
+          background-image: url("/images/ruby.png");
+        }
+
+        .css {
+          background-image: url("/images/css.png");
+        }
+
+        .html {
+          background-image: url("/images/html.png");
+        }
+
+        .nodejs1 {
+          background-image: url("/images/nodejs1.png");
+        }
+
+        .express {
+          background-image: url("/images/express.png");
+        }
+
+        .restapi {
+          background-image: url("/images/restapi.png");
+        }
+
+        .psql {
+          background-image: url("/images/psql.png");
+        }
+
+@media screen and (max-width: 850px) {
+  .BoxTitle {
+    font-size: 25px;
+  }
+  .skillTitle {
+    font-size: 18px;
+  }
+  .imgSkill {
+    width: 80px;
+    min-height: 40px;
+    height: 96px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .BoxTitle {
+    font-size: 20px;
+  }
+  .skillTitle {
+    font-size: 15px;
+  }
+  .imgSkill {
+    width: 70px;
+    min-height: 35px;
+    height: 84px;
+  }
+}

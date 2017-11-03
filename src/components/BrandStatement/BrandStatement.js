@@ -11,13 +11,10 @@ class BrandStatement extends Component {
               to be focused, organized and to work with others. My fascination for technical skills, and more specifically for logical
               problem solving, lead me to changing careers and becoming a web developer. I am described by others as determined,
               fast-learner and lively minded. I am someone with a strong desire for a challenge, who does what she is passionate about
-              with a lot of motivation and precision.
+            with a lot of motivation and precision.
           </p>
-          <p className="mymotto">
-            My motto?
-          </p>
-          <p className="motto">
-            <span className="majLetter">A</span>nything in life can be reached with work, patience, collaboration and positive energy.
+          <p className="brandStatementMotto">
+            <span className="majLetter">M</span>y motto is that anything in life can be reached with work, patience, collaboration and positive energy.
           </p>
         </div>
       </div>
