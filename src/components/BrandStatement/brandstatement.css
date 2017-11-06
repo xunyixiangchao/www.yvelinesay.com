@@ -9,6 +9,7 @@
   position: relative;
   background-image: url("/images/webdev3.jpeg");
   background-size: cover;
+  pointer-events: none;
 }
 
     .BrandStatement {
@@ -17,6 +18,7 @@
       display: flex;
       flex-direction: column;
       color: #C4CFC4;
+      text-shadow: .5px .5px .5px #6D756D;
     }
 
         .brandStatementP {
@@ -25,7 +27,6 @@
           line-height: 35px;
           font-size: 18px;
           font-family: 'PT Sans', sans-serif;
-          text-shadow: .5px .5px .5px #6D756D;
         }
 
 @media screen and (max-width: 850px) {
@@ -36,6 +37,7 @@
 
 @media screen and (max-width: 640px) {
   .BrandStatement {
-    max-width: 78%;
+    color: #6D756D;
+    text-shadow: 1px 1px 1px white;
   }
 }

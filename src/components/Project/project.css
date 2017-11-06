@@ -1,95 +1,109 @@
 .Project {
-  width: 49%;
-  margin: 1% 0;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  line-height: 15px;
+  position: absolute;
+  width: 36%;
+  left: 32%;
 }
 
-.Project:hover .ProjectText {
+    .Project .imageProject {
+      width: 100%;
+      height: auto;
+      filter: brightness(100%);
+    }
+
+.ProjectBefore {
   position: absolute;
+  left: -5%;
+  width: 36%;
+}
+
+.ProjectAfter {
+  position: absolute;
+  left: 69%;
+  width: 36%;
+}
+
+    .ProjectAfter .imageProject, .ProjectBefore .imageProject {
+      width: 100%;
+      height: auto;
+      filter: brightness(40%);
+      padding-top: 200px;
+    }
+
+    .ProjectAfter .imageProject:hover, .ProjectBefore .imageProject:hover {
+      filter: brightness(65%);
+    }
+
+.ProjectText {
   width: 100%;
-  height: 100%;
+  height: 200px;
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: space-between;
 }
 
-.Project:hover .image {
-  filter: brightness(100%);
-}
-
-.image {
-  width: 100%;
-  height: auto;
-  filter: brightness(40%);
-}
-
-.ProjectText {
-  display: none;
-}
-
     .title {
-      padding-left: 10px;
       font-family: 'Unica One', cursive;
-      font-size: 18px;
-      width: math(100%-10px);
-      height: 50px;
+      font-size: 24px;
       background-color: white;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      wrap: no-wrap;
+      padding-bottom: 10px;
     }
 
-            .skilltechno {
-              max-width: 35px;
-              max-height: 35px;
-            }
+    .technology {
+      display: flex;
+    }
+
+        .skilltechno {
+          align-self: center;
+          max-width: 60px;
+          max-height: 35px;
+        }
 
     .description {
-      background-color: rgba(255,255,255, .7);
-      padding: 1% 5%;
       font-size: 12px;
-      text-align: justify;
-      position: absolute;
-      bottom: 8%;
-      width: 90%;
-    }
-
-    .links {
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-      background-color: rgba(255,255,255, .7);
-      height: 8%;
-      width: 100%;
-    }
-
-    a {
-      width: 100%;
-      height: 100%;
       text-align: center;
     }
 
-    .imgProject {
-      max-width: 16%;
-      max-height: 70%;
-      margin: 0 auto;
+    .links {
+      text-align: right;
+      width: 100%;
     }
 
+    .imgProject {
+      max-width: 25px;
+      max-height: 25px;
+    }
 
 @media screen and (max-width: 850px) {
   .Project {
     width: 50%;
-    margin: 0;
+    left: 25%;
+  }
+
+  .ProjectBefore {
+    left: -26%;
+    width: 50%;
+  }
+
+  .ProjectAfter {
+    left: 76%;
+    width: 50%;
   }
 }
 
 @media screen and (max-width: 640px) {
   .Project {
-    width: 100%;
-    margin-bottom: 1%;
+    width: 70%;
+    left: 15%;
+  }
+
+  .ProjectBefore {
+    left: -16%;
+    width: 70%;
+  }
+
+  .ProjectAfter {
+    left: 86%;
+    width: 70%;
   }
 }

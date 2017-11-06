@@ -14,7 +14,11 @@ class Box extends Component {
       eachSkill.push(
         <div className="skill"key={e}>
           <div className="skillTitle">{e}</div>
-          <div className="skillImage"><img draggable="false" src={this.props.imgSkills[this.props.skills.indexOf(e)]} /></div>
+          <div className="skillImage">
+            <img alt={this.props.imgSkills[this.props.skills.indexOf(e)]}
+                 draggable="false"
+                 src={this.props.imgSkills[this.props.skills.indexOf(e)]} />
+          </div>
         </div>
       )
     })

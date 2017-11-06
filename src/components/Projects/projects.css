@@ -1,15 +1,24 @@
 .ProjectsContainer {
   width: 100%;
+  min-height: 100vh;
   background-color: white;
-  padding-top: 13vh;
+  padding: 13vh 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
 }
 
-.Projects {
-  max-width: 78%;
-  margin: 0 auto;
+.NavProject {
+  width: 30%;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
+  padding-bottom: 2%;
+}
+
+.buttonnavproject {
+  width: 15px;
 }
 
 @media screen and (max-width: 850px) {
@@ -21,5 +30,6 @@
 @media screen and (max-width: 640px) {
   .Projects {
     flex-direction: column;
+    align-items: center;
   }
 }

@@ -8,18 +8,50 @@ class Projects extends Component {
     super(props);
 
     this.state = {
+      allproject: ["1", "2", "3", "4", "5"],
       githiredtechno: ["React", "express", "nodejs1", "psql", "restapi"],
       meteo: ["React", "express", "nodejs1", "psql", "restapi"],
       remembook: ["html", "css", "js", "jquery", "nodejs1", "express", "psql", "restapi"],
       battleship: ["html", "css", "js", "jquery"],
-      notedtechno: ["React", "express", "css", "electron"]
+      notedtechno: ["React", "express", "css", "electron"],
+      isCurrent: "1"
     }
+
+    this.changeCurrent = this.changeCurrent.bind(this);
+    this.renderNavProject = this.renderNavProject.bind(this);
   }
+
+  changeCurrent(idProject) {
+    this.setState({
+      isCurrent: idProject
+    })
+  }
+
+  renderNavProject() {
+    const allProjectNav = [];
+    this.state.allproject.map(e => {
+      return (
+        allProjectNav.push(
+          <div key={e} onClick={() => {this.changeCurrent(e)}}><img className="buttonnavproject" src="./images/buttonnavproject.png" alt="x" /></div>
+        )
+      )
+    })
+    return allProjectNav
+  }
+
   render() {
     return (
       <div className="ProjectsContainer">
+
+        <div className="NavProject">
+          {this.renderNavProject()}
+        </div>
+
         <div className="Projects">
             <Project
+              classNameProject="1"
+              changeCurrent={this.changeCurrent}
+              display={this.state.isCurrent}
               title="Noted."
               technology={this.state.notedtechno}
               description="Little Note app while using Electron for the first time!"
@@ -29,6 +61,9 @@ class Projects extends Component {
             {/* linkToWeb="http://githiredpotoo.surge.sh/" */}
 
             <Project
+              classNameProject="2"
+              changeCurrent={this.changeCurrent}
+              display={this.state.isCurrent}
               title="Git Hired"
               technology={this.state.githiredtechno}
               description="It can be hard to track which jobs you’ve seen, when you applied, and who
@@ -40,6 +75,9 @@ class Projects extends Component {
             />
 
             <Project
+              classNameProject="3"
+              changeCurrent={this.changeCurrent}
+              display={this.state.isCurrent}
               title="Meteo Fly High"
               technology={this.state.meteo}
               description="Save your favorite cities in the world and know the weather in a glance!"
@@ -49,6 +87,9 @@ class Projects extends Component {
             {/* linkToWeb="https://git.generalassemb.ly/flyhigh" */}
 
             <Project
+              classNameProject="4"
+              changeCurrent={this.changeCurrent}
+              display={this.state.isCurrent}
               title="Remembook"
               technology={this.state.remembook}
               description="The 'anti-facebook' app. Not focus on your face but on your mind.
@@ -59,6 +100,9 @@ class Projects extends Component {
             />
 
             <Project
+              classNameProject="5"
+              changeCurrent={this.changeCurrent}
+              display={this.state.isCurrent}
               title="BattleShip"
               technology={this.state.battleship}
               description="Each player secretly arranges five ships on their primary grid,

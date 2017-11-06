@@ -1,6 +1,7 @@
 .BasicInfoContent {
   width: 100%;
   background-color: rgb(250,250,250);
+  pointer-events: none;
 }
 
 .BasicInfo {
@@ -26,4 +27,10 @@
   font-family: 'PT Sans', sans-serif;
   color: #97A4A8;
   font-size: 18px;
+}
+
+@media screen and (max-width: 640px) {
+  .basicInfoP {
+    font-size: 14px;
+  }
 }

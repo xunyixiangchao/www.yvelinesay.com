@@ -2,10 +2,10 @@
   width: 100%;
   position: absolute;
   top: 90vh;
-  background: -webkit-linear-gradient(rgba(255,255,255,0), rgba(255,255,255,.5));
-  background: -o-linear-gradient(rgba(255,255,255,0), rgba(255,255,255,.5));
-  background: -moz-linear-gradient(rgba(255,255,255,0), rgba(255,255,255,.5));
-  background: linear-gradient(rgba(255,255,255,0), rgba(255,255,255,.5));
+  background: -webkit-linear-gradient(rgba(255,255,255,.8), rgba(255,255,255,0));
+  background: -o-linear-gradient(rgba(255,255,255,.8), rgba(255,255,255,0));
+  background: -moz-linear-gradient(rgba(255,255,255,.8), rgba(255,255,255,0));
+  background: linear-gradient(rgba(255,255,255,.8), rgba(255,255,255,0));
   z-index: 2;
 }
 
@@ -23,11 +23,6 @@
   font-family: 'Unica One', cursive;
 }
 
-a {
-  text-decoration: none;
-  color: black;
-}
-
-a:hover {
+.navItem:hover{
   color: #97A4A8;
 }
