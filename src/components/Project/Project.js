@@ -12,7 +12,7 @@ class Project extends Component {
     const allTech = []
     this.props.technology.map(e => {
       allTech.push(
-        <img className='skilltechno' src={`./images/${e}.png`} />
+        <img draggable="false" className='skilltechno' src={`./images/${e}.png`} />
       )
     })
     return allTech
@@ -28,8 +28,8 @@ class Project extends Component {
           </div>
           <div className="description">{this.props.description}</div>
           <div className="links">
-            <a href={this.props.linkToGit} target="_blank"><div className="imgGit"></div></a>
-            <a href={this.props.linkToWeb} target="_blank"><div className="imgWeb"></div></a>
+            <a href={this.props.linkToGit} target="_blank"><img src="./images/github.png" draggable="false" className="imgProject" /></a>
+            <a href={this.props.linkToWeb} target="_blank"><img src="./images/web.png" draggable="false" className="imgProject" /></a>
           </div>
         </div>
       </div>

@@ -11,13 +11,23 @@ class Projects extends Component {
       githiredtechno: ["React", "express", "nodejs1", "psql", "restapi"],
       meteo: ["React", "express", "nodejs1", "psql", "restapi"],
       remembook: ["html", "css", "js", "jquery", "nodejs1", "express", "psql", "restapi"],
-      battleship: ["html", "css", "js", "jquery"]
+      battleship: ["html", "css", "js", "jquery"],
+      notedtechno: ["React", "express", "css", "electron"]
     }
   }
   render() {
     return (
       <div className="ProjectsContainer">
         <div className="Projects">
+            <Project
+              title="Noted."
+              technology={this.state.notedtechno}
+              description="Little Note app while using Electron for the first time!"
+              linkToGit="https://github.com/electron-WDI"
+              image="./images/noted.png"
+            />
+            {/* linkToWeb="http://githiredpotoo.surge.sh/" */}
+
             <Project
               title="Git Hired"
               technology={this.state.githiredtechno}
@@ -34,9 +44,9 @@ class Projects extends Component {
               technology={this.state.meteo}
               description="Save your favorite cities in the world and know the weather in a glance!"
               linkToGit="https://git.generalassemb.ly/flyhigh"
-              linkToWeb="https://git.generalassemb.ly/flyhigh"
               image="./images/flyhighsquare.png"
             />
+            {/* linkToWeb="https://git.generalassemb.ly/flyhigh" */}
 
             <Project
               title="Remembook"

@@ -2,7 +2,11 @@
   width: 100%;
   position: absolute;
   top: 90vh;
-  background-color: rgba(255,255,255,.5);
+  background: -webkit-linear-gradient(rgba(255,255,255,0), rgba(255,255,255,.5));
+  background: -o-linear-gradient(rgba(255,255,255,0), rgba(255,255,255,.5));
+  background: -moz-linear-gradient(rgba(255,255,255,0), rgba(255,255,255,.5));
+  background: linear-gradient(rgba(255,255,255,0), rgba(255,255,255,.5));
+  z-index: 2;
 }
 
 .NavBarContainer {
