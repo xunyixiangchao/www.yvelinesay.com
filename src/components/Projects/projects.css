@@ -2,7 +2,7 @@
   width: 100%;
   min-height: 100vh;
   background-color: white;
-  padding: 13vh 0;
+  padding-top: 13vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -14,11 +14,17 @@
   width: 30%;
   display: flex;
   justify-content: space-around;
+  align-items: center;
   padding-bottom: 2%;
 }
 
-.buttonnavproject {
+.activeButtonNavProject {
+  width: 20px;
+}
+
+.passiveButtonNavProject {
   width: 15px;
+  filter: invert(.5);
 }
 
 @media screen and (max-width: 850px) {

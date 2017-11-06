@@ -32,7 +32,14 @@ class Projects extends Component {
     this.state.allproject.map(e => {
       return (
         allProjectNav.push(
-          <div key={e} onClick={() => {this.changeCurrent(e)}}><img className="buttonnavproject" src="./images/buttonnavproject.png" alt="x" /></div>
+          <div>
+            { this.state.isCurrent === e &&
+              <div key={e} onClick={() => {this.changeCurrent(e)}}><img className="activeButtonNavProject" src="./images/buttonnavproject.png" alt="x" /></div>
+            }
+            { this.state.isCurrent !== e &&
+              <div key={e} onClick={() => {this.changeCurrent(e)}}><img className="passiveButtonNavProject" src="./images/buttonnavproject.png" alt="x" /></div>
+            }
+          </div>
         )
       )
     })
