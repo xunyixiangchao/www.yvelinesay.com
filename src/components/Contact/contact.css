@@ -1,6 +1,7 @@
 #ContactContainer {
   width: 100%;
-  background-image: url("/images/contactpic.png");
+  background: linear-gradient(to bottom, rgba(255,255,255,.4) 70%,
+              rgba(255,255,255,1)), url('/images/contactpic.png');
   background-size: cover;
   padding-top: 13vh;
   height: 73vh;
@@ -10,23 +11,62 @@
   position: relative;
 }
 
-.Contact {
-  max-width: 78%;
-  width: 100%;
-  position: absolute;
-  bottom: 15vh;
-  left: 11%;
-  display: flex;
-  justify-content: space-between;
-}
+    .Contact {
+      width: 78%;
+      position: absolute;
+      left: 11%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      height: 100%;
+    }
 
-.contactIcon {
-  width: 50px;
-}
+        .HireMe {
+          display: flex;
+          flex-direction: column;
+          padding-top: 20vh;
+        }
+
+            .HireMeEn, .HireMeFr {
+              width: 100%;
+              text-align: center;
+            }
+
+                .HireMeEn {
+                  font-size: 20px;
+                }
+
+                .HireMeFr {
+                  font-size: 16px;
+                }
+
+        .SayHello {
+          padding-top: 10vh;
+          font-size: 25px;
+          text-align: center;
+        }
+
+        .ContactIconsContainer {
+          width: 50%;
+          display: flex;
+          justify-content: space-between;
+          padding-bottom: 20vh;
+        }
+
+            .contactIcon {
+              width: 40px;
+            }
 
 @media screen and (max-width: 640px) {
   #ContactContainer {
-    background-image: url("/images/contactpic2.png");
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 50%,
+                rgba(255,255,255,1)), url('/images/contactpic2.png');
+    background-size: cover;
+  }
+
+  .ContactIconsContainer {
+    width: 100%;
   }
 
   .contactIcon {
