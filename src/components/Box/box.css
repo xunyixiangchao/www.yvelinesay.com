@@ -19,7 +19,6 @@
   font-size: 30px;
   position: absolute;
   top: 40px;
-  font-family: 'Unica One', cursive;
 }
 
 .skillContainer {
@@ -42,7 +41,6 @@
     .skillTitle {
       font-size: 20px;
       text-align: center;
-      font-family: 'Unica One', cursive;
       color: #97A4A8;
     }
 

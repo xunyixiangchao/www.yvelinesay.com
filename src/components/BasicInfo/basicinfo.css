@@ -5,7 +5,7 @@
 }
 
 .BasicInfo {
-  max-width: 80%;
+  max-width: 78%;
   height: 90vh;
   margin: 0 auto;
   display: flex;
@@ -15,7 +15,7 @@
 }
 
 .basicInfoGreeting {
-  font-size: 60px;
+  font-size: 80px;
   text-align: center;
   font-family: 'Sacramento', cursive;
 }
@@ -24,7 +24,6 @@
   position: absolute;
   bottom: 20px;
   right: 0px;
-  font-family: 'PT Sans', sans-serif;
   color: #97A4A8;
   font-size: 16px;
   text-align: right;

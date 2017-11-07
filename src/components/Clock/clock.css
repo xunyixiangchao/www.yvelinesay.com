@@ -3,6 +3,9 @@
   height: 60px;
   margin: 23px auto;
   position: relative;
+  background-color: #F7F7F7;
+  border-radius: 50%;
+  border: 13px solid #F7F7F7;
 }
 
 .heart {
