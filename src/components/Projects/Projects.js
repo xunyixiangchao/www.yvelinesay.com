@@ -63,6 +63,18 @@ class Projects extends Component {
               classNameProject="1"
               changeCurrent={this.changeCurrent}
               display={this.state.isCurrent}
+              title="Meteo Fly High"
+              technology={this.state.meteo}
+              description="Save your favorite cities in the world and know the weather in a glance!"
+              linkToGit="https://git.generalassemb.ly/flyhigh"
+              linkToWeb="http://flyhigh.surge.sh/"
+              image="./images/flyhighsquare.png"
+            />
+        
+            <Project
+              classNameProject="2"
+              changeCurrent={this.changeCurrent}
+              display={this.state.isCurrent}
               title="Noted."
               technology={this.state.notedtechno}
               description="Little Note app while using Electron for the first time!"
@@ -72,7 +84,7 @@ class Projects extends Component {
             />
 
             <Project
-              classNameProject="2"
+              classNameProject="3"
               changeCurrent={this.changeCurrent}
               display={this.state.isCurrent}
               title="Git Hired"
@@ -82,18 +94,6 @@ class Projects extends Component {
               linkToGit="https://github.com/rohara-gleveline"
               linkToWeb="http://githiredpotoo.surge.sh/"
               image="./images/githiredsquare.png"
-            />
-
-            <Project
-              classNameProject="3"
-              changeCurrent={this.changeCurrent}
-              display={this.state.isCurrent}
-              title="Meteo Fly High"
-              technology={this.state.meteo}
-              description="Save your favorite cities in the world and know the weather in a glance!"
-              linkToGit="https://git.generalassemb.ly/flyhigh"
-              linkToWeb="http://flyhigh.surge.sh/"
-              image="./images/flyhighsquare.png"
             />
 
             <Project
