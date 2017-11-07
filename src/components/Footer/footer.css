@@ -1,6 +1,11 @@
 .FooterContainer {
   width: 100%;
   background-color: white;
+  height: 15vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .Footer {

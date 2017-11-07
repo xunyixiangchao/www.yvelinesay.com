@@ -25,17 +25,36 @@
     .ProjectAfter .imageProject, .ProjectBefore .imageProject {
       width: 100%;
       height: auto;
-      filter: brightness(40%);
-      padding-top: 200px;
+      filter: brightness(30%);
+      padding-top: 130px;
+      position: relative;
     }
 
     .ProjectAfter .imageProject:hover, .ProjectBefore .imageProject:hover {
-      filter: brightness(65%);
+      filter: brightness(60%);
     }
+
+    .imageProjectDivContainer {
+      position: relative;
+    }
+
+    .arrowright, .arrowleft {
+      position: absolute;
+      width: 100px;
+      top: 57%;
+    }
+
+      .arrowright {
+        left: 1%;
+      }
+
+      .arrowleft {
+        right: 1%;
+      }
 
 .ProjectText {
   width: 100%;
-  height: 200px;
+  height: 130px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -44,9 +63,7 @@
 
     .title {
       font-family: 'Unica One', cursive;
-      font-size: 24px;
-      background-color: white;
-      padding-bottom: 10px;
+      font-size: 30px;
     }
 
     .technology {
@@ -55,18 +72,28 @@
 
         .skilltechno {
           align-self: center;
-          max-width: 60px;
-          max-height: 35px;
+          max-width: 40px;
+          max-height: 25px;
         }
+
+    .paragraphContainer {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
     .description {
       font-size: 12px;
       text-align: center;
+      flex: 5;
+      padding: 0 10px;
     }
 
     .links {
       text-align: right;
       width: 100%;
+      flex: 1;
     }
 
     .imgProject {
@@ -89,6 +116,11 @@
     left: 76%;
     width: 50%;
   }
+
+  .arrowright, .arrowleft {
+    width: 90px;
+    top: 55%;
+  }
 }
 
 @media screen and (max-width: 640px) {
@@ -105,5 +137,10 @@
   .ProjectAfter {
     left: 86%;
     width: 70%;
+  }
+
+  .arrowright, .arrowleft {
+    width: 80px;
+    top: 60%;
   }
 }

@@ -18,7 +18,7 @@ class Skills extends Component {
 
   render() {
     return (
-      <div className="SkillsContainer">
+      <div id="SkillsContainer">
         <div className="Skills">
           <Box title={"Front-End"}
             skills={this.state.skillsF}

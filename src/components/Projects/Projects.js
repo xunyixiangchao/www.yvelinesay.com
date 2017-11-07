@@ -32,7 +32,7 @@ class Projects extends Component {
     this.state.allproject.map(e => {
       return (
         allProjectNav.push(
-          <div>
+          <div key={e}>
             { this.state.isCurrent === e &&
               <div key={e} onClick={() => {this.changeCurrent(e)}}><img className="activeButtonNavProject" src="./images/buttonnavproject.png" alt="x" /></div>
             }
@@ -48,7 +48,7 @@ class Projects extends Component {
 
   render() {
     return (
-      <div className="ProjectsContainer">
+      <div id="ProjectsContainer">
 
         <div className="NavProject">
           {this.renderNavProject()}
@@ -63,9 +63,9 @@ class Projects extends Component {
               technology={this.state.notedtechno}
               description="Little Note app while using Electron for the first time!"
               linkToGit="https://github.com/electron-WDI"
+              linkToWeb="http://electron-libre.surge.sh/"
               image="./images/noted.png"
             />
-            {/* linkToWeb="http://githiredpotoo.surge.sh/" */}
 
             <Project
               classNameProject="2"
@@ -73,9 +73,8 @@ class Projects extends Component {
               display={this.state.isCurrent}
               title="Git Hired"
               technology={this.state.githiredtechno}
-              description="It can be hard to track which jobs you’ve seen, when you applied, and who
-              you’ve spoken to. GitHired aims to solve this problem by giving users a centralized
-              location for all of their job search management needs."
+              description="GitHired aims to give users a centralized location for all
+              of their job search management needs."
               linkToGit="https://github.com/rohara-gleveline"
               linkToWeb="http://githiredpotoo.surge.sh/"
               image="./images/githiredsquare.png"
@@ -89,9 +88,9 @@ class Projects extends Component {
               technology={this.state.meteo}
               description="Save your favorite cities in the world and know the weather in a glance!"
               linkToGit="https://git.generalassemb.ly/flyhigh"
+              linkToWeb="http://flyhigh.surge.sh/"
               image="./images/flyhighsquare.png"
             />
-            {/* linkToWeb="https://git.generalassemb.ly/flyhigh" */}
 
             <Project
               classNameProject="4"
@@ -112,8 +111,7 @@ class Projects extends Component {
               display={this.state.isCurrent}
               title="BattleShip"
               technology={this.state.battleship}
-              description="Each player secretly arranges five ships on their primary grid,
-              and each ship occupies a number of consecutive squares on the grid.
+              description="The famous game BattleShip online.
               The first one to have sunk all of the other's ships wins!"
               linkToGit="https://git.generalassemb.ly/yvln-ga/project1-battleship"
               linkToWeb="https://git.generalassemb.ly/pages/yvln-ga/project1-battleship/"

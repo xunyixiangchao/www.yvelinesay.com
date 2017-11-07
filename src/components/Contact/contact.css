@@ -1,17 +1,33 @@
-.ContactContainer {
+#ContactContainer {
   width: 100%;
   background-color: rgb(250,250,250);
   padding-top: 13vh;
-  min-height: 50vh;
+  height: 73vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
+  position: relative;
+}
+
+.contactpic {
+  display: inline;
+  width: 100%;
+  height: auto;
+  filter: grayscale(1) brightness(2) opacity(.5);
+  position: absolute;
+  top: 13vh;
+}
+
+.contactpic2, .contactpic3 {
+  display: none;
 }
 
 .Contact {
   max-width: 78%;
   width: 100%;
-  margin: 0 auto;
+  position: absolute;
+  bottom: 15vh;
+  left: 11%;
   display: flex;
   justify-content: space-between;
 }
@@ -21,7 +37,31 @@
 }
 
 @media screen and (max-width: 850px) {
-  .Contact {
-    max-width: 78%;
+  .contactpic, .contactpic3 {
+    display: none;
+  }
+
+  .contactpic2 {
+    display: inline;
+    width: 100%;
+    height: auto;
+    filter: grayscale(1) brightness(2) opacity(.5);
+    position: absolute;
+    top: 13vh;
+  }
+}
+
+@media screen and (max-width: 589px) {
+  .contactpic, .contactpic2 {
+    display: none;
+  }
+
+  .contactpic3 {
+    display: inline;
+    width: 100%;
+    height: auto;
+    filter: grayscale(1) brightness(2) opacity(.5);
+    position: absolute;
+    top: 13vh;
   }
 }

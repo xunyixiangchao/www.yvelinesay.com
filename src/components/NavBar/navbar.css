@@ -26,3 +26,8 @@
 .navItem:hover{
   color: #97A4A8;
 }
+
+.NavBarFixed {
+  position: fixed;
+  top: 0;
+}

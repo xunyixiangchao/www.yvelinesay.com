@@ -1,6 +1,7 @@
-.ProjectsContainer {
+#ProjectsContainer {
   width: 100%;
-  min-height: 100vh;
+  min-height: 600px;
+  height: 100vh;
   background-color: white;
   padding-top: 13vh;
   display: flex;
@@ -11,11 +12,10 @@
 }
 
 .NavProject {
-  width: 30%;
+  width: 15%;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding-bottom: 2%;
 }
 
 .activeButtonNavProject {
@@ -28,6 +28,12 @@
 }
 
 @media screen and (max-width: 850px) {
+
+  .ProjectsContainer {
+    min-height: 400px;
+    height: 90vh;
+  }
+
   .Projects {
     max-width: 100%;
   }

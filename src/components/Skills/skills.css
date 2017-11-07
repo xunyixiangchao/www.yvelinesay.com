@@ -1,7 +1,8 @@
-.SkillsContainer {
+#SkillsContainer {
   width: 100%;
+  height: 85vh;
   background-color: rgb(250,250,250);
-  padding-top: 10vh;
+  padding-top: 15vh;
   pointer-events: none;
 }
 

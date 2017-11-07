@@ -5,7 +5,7 @@ import './brandstatement.css';
 class BrandStatement extends Component {
   render() {
     return (
-      <div className="BrandStatementContainer">
+      <div id="BrandStatementContainer">
         <div className="BrandStatement">
           <p className="brandStatementP">
             My background in corporate real estate strategy and team management has taught me how

@@ -26,25 +26,39 @@ class Project extends Component {
             <div className="ProjectText">
               <div className="title">{this.props.title}</div>
               <div className="technology">{this.renderTechnology()}</div>
-              <div className="description">{this.props.description}</div>
-              <div className="links">
-                <a href={this.props.linkToGit} target="_blank"><img alt="gihub" src="./images/github.png" draggable="false" className="imgProject" /></a>
-                <a href={this.props.linkToWeb} target="_blank"><img alt="web" src="./images/web.png" draggable="false" className="imgProject" /></a>
+                <div className="paragraphContainer">
+                  <div className="description">
+                    {this.props.description}
+                  </div>
+                  <div className="links">
+                    <a href={this.props.linkToGit} target="_blank"><img alt="gihub" src="./images/github.png" draggable="false" className="imgProject" /></a>
+                    <a href={this.props.linkToWeb} target="_blank"><img alt="web" src="./images/web.png" draggable="false" className="imgProject" /></a>
+                  </div>
+                </div>
               </div>
-            </div>
             <img className="imageProject" alt={this.props.title} src={this.props.image} />
           </div>
         }
 
         {this.props.display === (parseInt(this.props.classNameProject)-1).toString() &&
           <div className="ProjectAfter" onClick={ () => {this.props.changeCurrent(this.props.classNameProject)}} >
-            <img className="imageProject" alt={this.props.title} src={this.props.image} />
+            <div className="imageProjectDivContainer">
+              <img className="imageProject" alt={this.props.title} src={this.props.image} />
+              <div className="arrowrightDivContainer">
+                <img className="arrowright" alt={`arrowright${this.props.title}`} src="./images/arrowright.png"/>
+              </div>
+            </div>
           </div>
         }
 
         {this.props.display === (parseInt(this.props.classNameProject)+1).toString() &&
           <div className="ProjectBefore" onClick={ () => {this.props.changeCurrent(this.props.classNameProject)}} >
-            <img className="imageProject" alt={this.props.title} src={this.props.image} />
+            <div className="imageProjectDivContainer">
+              <img className="imageProject" alt={this.props.title} src={this.props.image} />
+              <div className="arrowleftDivContainer">
+                <img className="arrowleft" alt={`arrowright${this.props.title}`} src="./images/arrowleft.png"/>
+              </div>
+            </div>
           </div>
         }
 
