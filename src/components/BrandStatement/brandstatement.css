@@ -6,7 +6,7 @@
   justify-content: center;
   align-items: flex-start;
   position: relative;
-  background-image: url("/images/webdev.jpeg");
+  background-image: url("/images/webdev3.jpeg");
   background-size: cover;
   pointer-events: none;
 }
@@ -24,7 +24,7 @@
           width: 100%;
           text-align: justify;
           line-height: 35px;
-          font-size: 16px;
+          font-size: 18px;
         }
 
 @media screen and (max-width: 850px) {
