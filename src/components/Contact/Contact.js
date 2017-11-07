@@ -12,7 +12,7 @@ class Contact extends Component {
               Want to hire me?
             </span>
             <span className="HireMeFr">
-              Interessé(e) par mon profil?
+              Intéressé(e) par mon profil?
             </span>
           </div>
 
