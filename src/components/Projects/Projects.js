@@ -34,10 +34,14 @@ class Projects extends Component {
         allProjectNav.push(
           <div key={e}>
             { this.state.isCurrent === e &&
-              <div key={e} onClick={() => {this.changeCurrent(e)}}><img className="activeButtonNavProject" src="./images/buttonnavproject.png" alt="x" /></div>
+              <div key={e} >
+                <img className="activeButtonNavProject" src="./images/buttonnavproject.png" alt="x" />
+              </div>
             }
             { this.state.isCurrent !== e &&
-              <div key={e} onClick={() => {this.changeCurrent(e)}}><img className="passiveButtonNavProject" src="./images/buttonnavproject.png" alt="x" /></div>
+              <div key={e} onClick={ () => { setTimeout(this.changeCurrent(e),1000) }}>
+                <img className="passiveButtonNavProject" src="./images/buttonnavproject.png" alt="x" />
+              </div>
             }
           </div>
         )

@@ -100,6 +100,14 @@
       max-height: 25px;
     }
 
+.afterClicked {
+  
+}
+
+.beforeClicked {
+
+}
+
 @media screen and (max-width: 850px) {
   .Project {
     width: 50%;
