@@ -9,8 +9,12 @@ class BasicInfo extends Component {
     super(props);
 
     this.state = {
-      greeting: "",
+      greeting: ""
     }
+  }
+  
+  componentDidMount() {
+    this.setGreeting();
   }
 
   setGreeting() {
