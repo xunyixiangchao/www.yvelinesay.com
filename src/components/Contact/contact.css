@@ -14,6 +14,7 @@
     .Contact {
       width: 78%;
       position: absolute;
+      top: 0;
       left: 11%;
       display: flex;
       flex-direction: column;
