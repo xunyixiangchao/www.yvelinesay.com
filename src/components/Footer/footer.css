@@ -9,7 +9,7 @@
 }
 
 .Footer {
-  max-width: 80%;
+  max-width: 78%;
   width: 100%;
   margin: 0 auto;
   display: flex;
@@ -18,6 +18,14 @@
   align-items: center;
   font-size: 13px;
   padding: 20px 0;
+  position: relative;
+}
+
+.coffeePic {
+  position: absolute;
+  bottom: 12%;
+  right: 20%;
+  width: 50px;
 }
 
 .pfooter {
@@ -33,4 +41,28 @@
 .githublinkfooter {
   text-decoration: none;
   color: #F0B9AD;
+}
+
+@media screen and (max-width: 850px) {
+  .coffeePic {
+    bottom: 30%;
+    right: 0;
+    width: 40px;
+  }
+  
+  .pfooter {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .coffeePic {
+    bottom: 30%;
+    right: 0;
+    width: 30px;
+  }
+  
+  .pfooter {
+    font-size: 10px;
+  }
 }

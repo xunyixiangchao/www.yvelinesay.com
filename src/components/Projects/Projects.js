@@ -89,8 +89,7 @@ class Projects extends Component {
               display={this.state.isCurrent}
               title="Git Hired"
               technology={this.state.githiredtechno}
-              description="GitHired aims to give users a centralized location for all
-              of their job search management needs."
+              description="GitHired aims to give users a centralized location for all of their job search management needs."
               linkToGit="https://github.com/rohara-gleveline"
               linkToWeb="http://githiredpotoo.surge.sh/"
               image="./images/githiredsquare.png"
@@ -102,8 +101,7 @@ class Projects extends Component {
               display={this.state.isCurrent}
               title="Remembook"
               technology={this.state.remembook}
-              description="The 'anti-facebook' app. Not focus on your face but on your mind.
-              Not focus on others's life but on yours."
+              description="The 'anti-facebook' app. Not focus on your face but on your mind. Not focus on others's life but on yours."
               linkToGit="https://git.generalassemb.ly/yvln-ga/project2-remembook"
               linkToWeb="https://project-remembook.herokuapp.com/"
               image="./images/remembooksquare.png"
@@ -115,8 +113,7 @@ class Projects extends Component {
               display={this.state.isCurrent}
               title="BattleShip"
               technology={this.state.battleship}
-              description="The famous game BattleShip online.
-              The first one to have sunk all of the other's ships wins!"
+              description="The famous game BattleShip online. The first one to have sunk all of the other's ships wins!"
               linkToGit="https://git.generalassemb.ly/yvln-ga/project1-battleship"
               linkToWeb="https://git.generalassemb.ly/pages/yvln-ga/project1-battleship/"
               image="./images/battleshipsquare.png"

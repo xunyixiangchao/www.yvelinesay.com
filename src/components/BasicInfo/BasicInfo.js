@@ -9,7 +9,7 @@ class BasicInfo extends Component {
     super(props);
 
     this.state = {
-      greeting: ""
+      greeting: "",
     }
   }
 
@@ -28,10 +28,6 @@ class BasicInfo extends Component {
         greeting: "Good evening"
       })
     }
-  }
-
-  componentDidMount() {
-    this.setGreeting();
   }
 
   render() {
