@@ -5,9 +5,6 @@ class Contact extends Component {
   render() {
     return (
       <div id="ContactContainer">
-        <img className="contactpic" alt="Goodbye" src="./images/contactpic.png" />
-        <img className="contactpic2" alt="Goodbye" src="./images/contactpic2.png" />
-        <img className="contactpic3" alt="Goodbye" src="./images/contactpic3.png" />
         <div className="Contact">
           <div className="LinkedIn">
             <a href="https://www.linkedin.com/in/yveline-say/" rel="noopener noreferrer" target="_blank" ><img draggable="false" alt="linkedin icon" src="./images/linkedin.png" className="contactIcon" /></a>

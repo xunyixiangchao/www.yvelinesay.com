@@ -1,25 +1,13 @@
 #ContactContainer {
   width: 100%;
-  background-color: rgb(250,250,250);
+  background-image: url("/images/contactpic.png");
+  background-size: cover;
   padding-top: 13vh;
   height: 73vh;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   position: relative;
-}
-
-.contactpic {
-  display: inline;
-  width: 100%;
-  height: auto;
-  filter: grayscale(1) brightness(2) opacity(.5);
-  position: absolute;
-  top: 13vh;
-}
-
-.contactpic2, .contactpic3 {
-  display: none;
 }
 
 .Contact {
@@ -36,32 +24,12 @@
   width: 50px;
 }
 
-@media screen and (max-width: 850px) {
-  .contactpic, .contactpic3 {
-    display: none;
+@media screen and (max-width: 640px) {
+  #ContactContainer {
+    background-image: url("/images/contactpic2.png");
   }
 
-  .contactpic2 {
-    display: inline;
-    width: 100%;
-    height: auto;
-    filter: grayscale(1) brightness(2) opacity(.5);
-    position: absolute;
-    top: 13vh;
-  }
-}
-
-@media screen and (max-width: 589px) {
-  .contactpic, .contactpic2 {
-    display: none;
-  }
-
-  .contactpic3 {
-    display: inline;
-    width: 100%;
-    height: auto;
-    filter: grayscale(1) brightness(2) opacity(.5);
-    position: absolute;
-    top: 13vh;
+  .contactIcon {
+    width: 35px;
   }
 }
