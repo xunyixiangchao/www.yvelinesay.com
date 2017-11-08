@@ -9,9 +9,9 @@ class Projects extends Component {
 
     this.state = {
       allproject: ["1", "2", "3", "4", "5"],
-      githiredtechno: ["React", "express", "nodejs1", "psql", "restapi"],
-      meteo: ["React", "express", "nodejs1", "psql", "restapi"],
-      remembook: ["html", "css", "js", "jquery", "nodejs1", "express", "psql", "restapi"],
+      githiredtechno: ["React", "express", "nodejs", "psql", "restapi"],
+      meteo: ["React", "express", "nodejs", "psql", "restapi"],
+      remembook: ["html", "css", "js", "jquery", "nodejs", "express", "psql", "restapi"],
       battleship: ["html", "css", "js", "jquery"],
       notedtechno: ["React", "express", "css", "electron"],
       isCurrent: "1"
@@ -68,7 +68,7 @@ class Projects extends Component {
               description="Save your favorite cities in the world and know the weather in a glance!"
               linkToGit="https://git.generalassemb.ly/flyhigh"
               linkToWeb="http://flyhigh.surge.sh/"
-              image="./images/flyhighsquare.png"
+              image="./images/flyhigh.png"
             />
         
             <Project
@@ -92,7 +92,7 @@ class Projects extends Component {
               description="GitHired aims to give users a centralized location for all of their job search management needs."
               linkToGit="https://github.com/rohara-gleveline"
               linkToWeb="http://githiredpotoo.surge.sh/"
-              image="./images/githiredsquare.png"
+              image="./images/githired.png"
             />
 
             <Project
@@ -104,7 +104,7 @@ class Projects extends Component {
               description="The 'anti-facebook' app. Not focus on your face but on your mind. Not focus on others's life but on yours."
               linkToGit="https://git.generalassemb.ly/yvln-ga/project2-remembook"
               linkToWeb="https://project-remembook.herokuapp.com/"
-              image="./images/remembooksquare.png"
+              image="./images/remembook.png"
             />
 
             <Project
@@ -116,7 +116,7 @@ class Projects extends Component {
               description="The famous game BattleShip online. The first one to have sunk all of the other's ships wins!"
               linkToGit="https://git.generalassemb.ly/yvln-ga/project1-battleship"
               linkToWeb="https://git.generalassemb.ly/pages/yvln-ga/project1-battleship/"
-              image="./images/battleshipsquare.png"
+              image="./images/battleship.png"
             />
 
         </div>
