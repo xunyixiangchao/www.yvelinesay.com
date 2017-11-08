@@ -77,3 +77,9 @@
     height: 84px;
   }
 }
+
+@media screen and (max-width: 480px) {
+  .skill {
+    margin: 15px;
+  }
+}
