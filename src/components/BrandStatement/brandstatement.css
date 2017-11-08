@@ -38,4 +38,8 @@
   .BrandStatement {
     padding-top: 13vh;
   }
+  
+  .brandStatementP {
+    line-height: 28px;
+  }
 }
