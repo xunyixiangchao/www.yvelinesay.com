@@ -1,59 +1,46 @@
 .Project {
-  position: absolute;
-  width: 36%;
-  left: 32%;
-  transition: left 0.2s;
+  min-width: 40vw;
+  height: 100%;
 }
 
     .Project .imageProject {
+      transition: 1s;
       width: 100%;
       height: auto;
+    }
+
+    .currentProject .imageProject {
       filter: brightness(100%);
     }
 
-.ProjectBefore {
-  position: absolute;
-  left: -5%;
-  width: 36%;
-}
-
-.ProjectAfter {
-  position: absolute;
-  left: 69%;
-  width: 36%;
-}
-
-    .ProjectAfter .imageProject, .ProjectBefore .imageProject {
-      width: 100%;
-      height: auto;
-      filter: brightness(30%);
-      padding-top: 130px;
-      position: relative;
+    .currentProject .ProjectText {
+      color: black;
     }
 
-    .ProjectAfter .imageProject:hover, .ProjectBefore .imageProject:hover {
+    .currentProject img {
+      transition: 1s;
+      filter: opacity(100%);
+    }
+
+    .notCurrentProject .imageProject {
+      filter: brightness(40%);
+    }
+
+    .notCurrentProject .imageProject:hover {
       filter: brightness(60%);
     }
 
-    .imageProjectDivContainer {
-      position: relative;
+    .notCurrentProject .ProjectText {
+      color: #fafafa;
     }
 
-    .arrowright, .arrowleft {
-      position: absolute;
-      width: 100px;
-      top: 57%;
+    .notCurrentProject img {
+      transition: 1s;
+      filter: opacity(10%);
     }
-
-      .arrowright {
-        left: 1%;
-      }
-
-      .arrowleft {
-        right: 1%;
-      }
 
 .ProjectText {
+  transition: 1s;
   width: 100%;
   height: 130px;
   display: flex;
@@ -101,54 +88,8 @@
       max-height: 25px;
     }
 
-.afterClicked {
-  
-}
-
-.beforeClicked {
-
-}
-
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 480px) {
   .Project {
-    width: 50%;
-    left: 25%;
-  }
-
-  .ProjectBefore {
-    left: -26%;
-    width: 50%;
-  }
-
-  .ProjectAfter {
-    left: 76%;
-    width: 50%;
-  }
-
-  .arrowright, .arrowleft {
-    width: 90px;
-    top: 55%;
-  }
-}
-
-@media screen and (max-width: 640px) {
-  .Project {
-    width: 70%;
-    left: 15%;
-  }
-
-  .ProjectBefore {
-    left: -56%;
-    width: 70%;
-  }
-
-  .ProjectAfter {
-    left: 86%;
-    width: 70%;
-  }
-
-  .arrowright, .arrowleft {
-    width: 60px;
-    top: 60%;
+    min-width: 60vw;
   }
 }

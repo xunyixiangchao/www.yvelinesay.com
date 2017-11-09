@@ -38,7 +38,6 @@ class NavBar extends Component {
 
   render() {
     const { isFixed } = this.state;
-
     return (
       <div className={`NavBar ${isFixed ? "NavBarFixed" : ""} `}>
         <div className="NavBarContainer">

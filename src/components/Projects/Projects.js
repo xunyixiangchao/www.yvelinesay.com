@@ -14,17 +14,19 @@ class Projects extends Component {
       remembook: ["html", "css", "js", "jquery", "nodejs", "express", "psql", "restapi"],
       battleship: ["html", "css", "js", "jquery"],
       notedtechno: ["React", "express", "css", "electron"],
-      isCurrent: "1"
+      current: "2"
     }
 
-    this.changeCurrent = this.changeCurrent.bind(this);
     this.renderNavProject = this.renderNavProject.bind(this);
+    this.changeCurrent = this.changeCurrent.bind(this);
   }
 
-  changeCurrent(idProject) {
-    this.setState({
-      isCurrent: idProject
-    })
+  componentDidMount() {
+    window.addEventListener('resize', this.toScroll);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.toScroll);
   }
 
   renderNavProject() {
@@ -32,22 +34,21 @@ class Projects extends Component {
     this.state.allproject.map(e => {
       return (
         allProjectNav.push(
-          <div key={e}>
-            { this.state.isCurrent === e &&
-              <div key={e} >
-                <img className="activeButtonNavProject" src="./images/buttonnavproject.png" alt="x" />
-              </div>
-            }
-            { this.state.isCurrent !== e &&
-              <div key={e} onClick={ () => { setTimeout(this.changeCurrent(e),1000) }}>
-                <img className="passiveButtonNavProject" src="./images/buttonnavproject.png" alt="x" />
-              </div>
-            }
+          <div key={e} onClick={ () => {this.changeCurrent(e)}}>
+            <img className={`${this.state.current === e ? 'activeButtonNavProject' : 'passiveButtonNavProject'}`} src="./images/buttonnavproject.png" alt="x" />
           </div>
         )
       )
     })
-    return allProjectNav
+    return allProjectNav;
+  }
+
+  changeCurrent(which) {
+    this.setState({
+      current: which
+    });
+    let howMany = parseInt(this.state.current) - parseInt(which);
+    this.scroll.style.left = `${this.scroll.offsetLeft + (howMany * parseInt(document.querySelector(".Project").offsetWidth))}px`;
   }
 
   render() {
@@ -59,22 +60,13 @@ class Projects extends Component {
         </div>
 
         <div className="Projects">
+          <div className="ProjectsScroll" ref={(el) => {this.scroll = el}} >
+
             <Project
+              ref={(el) => {this.project = el}}
               classNameProject="1"
               changeCurrent={this.changeCurrent}
-              display={this.state.isCurrent}
-              title="Meteo Fly High"
-              technology={this.state.meteo}
-              description="Save your favorite cities in the world and know the weather in a glance!"
-              linkToGit="https://git.generalassemb.ly/flyhigh"
-              linkToWeb="http://flyhigh.surge.sh/"
-              image="./images/flyhigh.png"
-            />
-        
-            <Project
-              classNameProject="2"
-              changeCurrent={this.changeCurrent}
-              display={this.state.isCurrent}
+              whichCurrent={this.state.current}
               title="Noted."
               technology={this.state.notedtechno}
               description="Little Note app while using Electron for the first time!"
@@ -84,9 +76,21 @@ class Projects extends Component {
             />
 
             <Project
+              classNameProject="2"
+              changeCurrent={this.changeCurrent}
+              whichCurrent={this.state.current}
+              title="Meteo Fly High"
+              technology={this.state.meteo}
+              description="Save your favorite cities in the world and know the weather in a glance!"
+              linkToGit="https://git.generalassemb.ly/flyhigh"
+              linkToWeb="http://flyhigh.surge.sh/"
+              image="./images/flyhigh.png"
+            />
+
+            <Project
               classNameProject="3"
               changeCurrent={this.changeCurrent}
-              display={this.state.isCurrent}
+              whichCurrent={this.state.current}
               title="Git Hired"
               technology={this.state.githiredtechno}
               description="GitHired aims to give users a centralized location for all of their job search management needs."
@@ -98,7 +102,7 @@ class Projects extends Component {
             <Project
               classNameProject="4"
               changeCurrent={this.changeCurrent}
-              display={this.state.isCurrent}
+              whichCurrent={this.state.current}
               title="Remembook"
               technology={this.state.remembook}
               description="The 'anti-facebook' app. Not focus on your face but on your mind. Not focus on others's life but on yours."
@@ -110,7 +114,7 @@ class Projects extends Component {
             <Project
               classNameProject="5"
               changeCurrent={this.changeCurrent}
-              display={this.state.isCurrent}
+              whichCurrent={this.state.current}
               title="BattleShip"
               technology={this.state.battleship}
               description="The famous game BattleShip online. The first one to have sunk all of the other's ships wins!"
@@ -119,7 +123,9 @@ class Projects extends Component {
               image="./images/battleship.png"
             />
 
+          </div>
         </div>
+
     </div>
     );
   }
