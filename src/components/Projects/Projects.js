@@ -8,7 +8,8 @@ class Projects extends Component {
     super(props);
 
     this.state = {
-      allproject: ["1", "2", "3", "4", "5"],
+      allproject: ["1", "2", "3", "4", "5", "6"],
+      beeu: ["React", "express", "nodejs", "psql", "restapi"],
       githiredtechno: ["React", "express", "nodejs", "psql", "restapi"],
       meteo: ["React", "express", "nodejs", "psql", "restapi"],
       remembook: ["html", "css", "js", "jquery", "nodejs", "express", "psql", "restapi"],
@@ -91,6 +92,18 @@ class Projects extends Component {
               classNameProject="3"
               changeCurrent={this.changeCurrent}
               whichCurrent={this.state.current}
+              title="Be EUrself"
+              technology={this.state.beeu}
+              description="Learn more about Europe in playing with this 6 mini-games"
+              linkToGit="https://github.com/yvln/REACT-final-project-ga"
+              linkToWeb="https://beeurself.netlify.com/"
+              image="./images/beeu.png"
+            />
+
+            <Project
+              classNameProject="4"
+              changeCurrent={this.changeCurrent}
+              whichCurrent={this.state.current}
               title="Git Hired"
               technology={this.state.githiredtechno}
               description="GitHired aims to give users a centralized location for all of their job search management needs."
@@ -100,7 +113,7 @@ class Projects extends Component {
             />
 
             <Project
-              classNameProject="4"
+              classNameProject="5"
               changeCurrent={this.changeCurrent}
               whichCurrent={this.state.current}
               title="Remembook"
@@ -112,7 +125,7 @@ class Projects extends Component {
             />
 
             <Project
-              classNameProject="5"
+              classNameProject="6"
               changeCurrent={this.changeCurrent}
               whichCurrent={this.state.current}
               title="BattleShip"
