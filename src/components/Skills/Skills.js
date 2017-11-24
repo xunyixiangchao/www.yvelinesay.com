@@ -33,7 +33,7 @@ class Skills extends Component {
       this.setState({
         appeared: true
       })
-    } else if ((top < window.innerHeight * 1.2) && (this.state.appeared)) {
+    } else if ((top < window.innerHeight * 1) && (this.state.appeared)) {
       this.setState({
         appeared: false
       })

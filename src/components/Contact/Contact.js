@@ -27,7 +27,7 @@ class Contact extends Component {
       this.setState({
         appeared: true
       })
-    } else if ((top < window.innerHeight * 3.2) && (this.state.appeared)) {
+    } else if ((top < window.innerHeight * 3) && (this.state.appeared)) {
       this.setState({
         appeared: false
       })

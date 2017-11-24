@@ -38,7 +38,7 @@ onScroll(event) {
     this.setState({
       appeared: true
     })
-  } else if ((top < window.innerHeight * 2.2) && (this.state.appeared)) {
+  } else if ((top < window.innerHeight * 2) && (this.state.appeared)) {
     this.setState({
       appeared: false
     })

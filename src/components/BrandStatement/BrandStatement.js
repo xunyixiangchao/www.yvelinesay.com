@@ -28,7 +28,7 @@ class BrandStatement extends Component {
       this.setState({
         appeared: true
       })
-    } else if ((top < window.innerHeight * 0.2) && (this.state.appeared)) {
+    } else if ((top < window.innerHeight * 0.1) && (this.state.appeared)) {
       this.setState({
         appeared: false
       })
