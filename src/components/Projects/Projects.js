@@ -68,7 +68,6 @@ onScroll(event) {
   }
 
   render() {
-    console.log('Projects this.state.appeared', this.state.appeared);
     return (
       <div id="ProjectsContainer">
         <div className={this.state.appeared ? 'appearProjects' : 'hide'}>

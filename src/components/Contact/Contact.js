@@ -23,11 +23,11 @@ class Contact extends Component {
   onScroll(event) {
     const top  = window.pageYOffset || document.documentElement.scrollTop;
 
-    if ((top > window.innerHeight * 3.2) && (!this.state.appeared)) {
+    if ((top > window.innerHeight * 3.4) && (!this.state.appeared)) {
       this.setState({
         appeared: true
       })
-    } else if ((top < window.innerHeight * 3) && (this.state.appeared)) {
+    } else if ((top < window.innerHeight * 3.2) && (this.state.appeared)) {
       this.setState({
         appeared: false
       })
@@ -35,7 +35,6 @@ class Contact extends Component {
   }
 
   render() {
-    console.log('Contact this.state.appeared', this.state.appeared);
     return (
       <div id="ContactContainer">
         <div className={`Contact ${this.state.appeared ? 'appearContact' : 'hide'}`}>
