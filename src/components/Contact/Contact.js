@@ -2,10 +2,43 @@ import React, { Component } from 'react';
 import './contact.css';
 
 class Contact extends Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      appeared: false
+    }
+
+    this.onScroll = this.onScroll.bind(this);
+  }
+
+  componentWillMount() {
+    document.addEventListener('scroll', this.onScroll);
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener('scroll', this.onScroll);
+  }
+
+  onScroll(event) {
+    const top  = window.pageYOffset || document.documentElement.scrollTop;
+
+    if ((top > window.innerHeight * 3.2) && (!this.state.appeared)) {
+      this.setState({
+        appeared: true
+      })
+    } else if ((top < window.innerHeight * 3.2) && (this.state.appeared)) {
+      this.setState({
+        appeared: false
+      })
+    }
+  }
+
   render() {
+    console.log('Contact this.state.appeared', this.state.appeared);
     return (
       <div id="ContactContainer">
-        <div className="Contact">
+        <div className={`Contact ${this.state.appeared ? 'appearContact' : 'hide'}`}>
 
           <div className="HireMe">
             <span className="HireMeEn">

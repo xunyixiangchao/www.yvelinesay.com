@@ -10,8 +10,21 @@
   max-width: 78%;
   width: 100%;
   margin: 0 auto;
+}
+
+.appearSkills {
+  animation: fadein 1s;
   display: flex;
   justify-content: space-between;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @media screen and (max-width: 850px) {

@@ -15,20 +15,35 @@ class Projects extends Component {
       remembook: ["html", "css", "js", "jquery", "nodejs", "express", "psql", "restapi"],
       battleship: ["html", "css", "js", "jquery"],
       notedtechno: ["React", "express", "css", "electron"],
-      current: "2"
+      current: "2",
+      appeared: false
     }
 
     this.renderNavProject = this.renderNavProject.bind(this);
     this.changeCurrent = this.changeCurrent.bind(this);
+    this.onScroll = this.onScroll.bind(this);
   }
 
-  componentDidMount() {
-    window.addEventListener('resize', this.toScroll);
-  }
+componentWillMount() {
+  document.addEventListener('scroll', this.onScroll);
+}
 
-  componentWillUnmount() {
-    window.removeEventListener('resize', this.toScroll);
+componentWillUnmount() {
+  document.removeEventListener('scroll', this.onSrcoll);
+}
+
+onScroll(event) {
+  const top  = window.pageYOffset || document.documentElement.scrollTop;
+  if ((top > window.innerHeight * 2.2) && (!this.state.appeared)) {
+    this.setState({
+      appeared: true
+    })
+  } else if ((top < window.innerHeight * 2.2) && (this.state.appeared)) {
+    this.setState({
+      appeared: false
+    })
   }
+}
 
   renderNavProject() {
     const allProjectNav = [];
@@ -53,92 +68,95 @@ class Projects extends Component {
   }
 
   render() {
+    console.log('Projects this.state.appeared', this.state.appeared);
     return (
       <div id="ProjectsContainer">
+        <div className={this.state.appeared ? 'appearProjects' : 'hide'}>
 
-        <div className="NavProject">
-          {this.renderNavProject()}
-        </div>
-
-        <div className="Projects">
-          <div className="ProjectsScroll" ref={(el) => {this.scroll = el}} >
-
-            <Project
-              ref={(el) => {this.project = el}}
-              classNameProject="1"
-              changeCurrent={this.changeCurrent}
-              whichCurrent={this.state.current}
-              title="Noted."
-              technology={this.state.notedtechno}
-              description="Little Note app while using Electron for the first time!"
-              linkToGit="https://github.com/electron-WDI"
-              linkToWeb="http://electron-libre.surge.sh/"
-              image="./images/noted.png"
-            />
-
-            <Project
-              classNameProject="2"
-              changeCurrent={this.changeCurrent}
-              whichCurrent={this.state.current}
-              title="Meteo Fly High"
-              technology={this.state.meteo}
-              description="Save your favorite cities in the world and know the weather in a glance!"
-              linkToGit="https://git.generalassemb.ly/flyhigh"
-              linkToWeb="http://flyhigh.surge.sh/"
-              image="./images/flyhigh.png"
-            />
-
-            <Project
-              classNameProject="3"
-              changeCurrent={this.changeCurrent}
-              whichCurrent={this.state.current}
-              title="Be EUrself"
-              technology={this.state.beeu}
-              description="Learn more about Europe in playing with this 6 mini-games"
-              linkToGit="https://github.com/yvln/REACT-final-project-ga"
-              linkToWeb="https://beeurself.netlify.com/"
-              image="./images/beeu.png"
-            />
-
-            <Project
-              classNameProject="4"
-              changeCurrent={this.changeCurrent}
-              whichCurrent={this.state.current}
-              title="Git Hired"
-              technology={this.state.githiredtechno}
-              description="GitHired aims to give users a centralized location for all of their job search management needs."
-              linkToGit="https://github.com/rohara-gleveline"
-              linkToWeb="http://githiredpotoo.surge.sh/"
-              image="./images/githired.png"
-            />
-
-            <Project
-              classNameProject="5"
-              changeCurrent={this.changeCurrent}
-              whichCurrent={this.state.current}
-              title="Remembook"
-              technology={this.state.remembook}
-              description="The 'anti-facebook' app. Not focus on your face but on your mind. Not focus on others's life but on yours."
-              linkToGit="https://git.generalassemb.ly/yvln-ga/project2-remembook"
-              linkToWeb="https://project-remembook.herokuapp.com/"
-              image="./images/remembook.png"
-            />
-
-            <Project
-              classNameProject="6"
-              changeCurrent={this.changeCurrent}
-              whichCurrent={this.state.current}
-              title="BattleShip"
-              technology={this.state.battleship}
-              description="The famous game BattleShip online. The first one to have sunk all of the other's ships wins!"
-              linkToGit="https://git.generalassemb.ly/yvln-ga/project1-battleship"
-              linkToWeb="https://git.generalassemb.ly/pages/yvln-ga/project1-battleship/"
-              image="./images/battleship.png"
-            />
-
+          <div className="NavProject">
+            {this.renderNavProject()}
           </div>
-        </div>
 
+          <div className="Projects">
+            <div className="ProjectsScroll" ref={(el) => {this.scroll = el}} >
+
+              <Project
+                ref={(el) => {this.project = el}}
+                classNameProject="1"
+                changeCurrent={this.changeCurrent}
+                whichCurrent={this.state.current}
+                title="Noted."
+                technology={this.state.notedtechno}
+                description="Little Note app while using Electron for the first time!"
+                linkToGit="https://github.com/electron-WDI"
+                linkToWeb="http://electron-libre.surge.sh/"
+                image="./images/noted.png"
+              />
+
+              <Project
+                classNameProject="2"
+                changeCurrent={this.changeCurrent}
+                whichCurrent={this.state.current}
+                title="Meteo Fly High"
+                technology={this.state.meteo}
+                description="Save your favorite cities in the world and know the weather in a glance!"
+                linkToGit="https://git.generalassemb.ly/flyhigh"
+                linkToWeb="http://flyhigh.surge.sh/"
+                image="./images/flyhigh.png"
+              />
+
+              <Project
+                classNameProject="3"
+                changeCurrent={this.changeCurrent}
+                whichCurrent={this.state.current}
+                title="Be EUrself"
+                technology={this.state.beeu}
+                description="Learn more about Europe in playing with this 6 mini-games"
+                linkToGit="https://github.com/yvln/REACT-final-project-ga"
+                linkToWeb="https://beeurself.netlify.com/"
+                image="./images/beeu.png"
+              />
+
+              <Project
+                classNameProject="4"
+                changeCurrent={this.changeCurrent}
+                whichCurrent={this.state.current}
+                title="Git Hired"
+                technology={this.state.githiredtechno}
+                description="GitHired aims to give users a centralized location for all of their job search management needs."
+                linkToGit="https://github.com/rohara-gleveline"
+                linkToWeb="http://githiredpotoo.surge.sh/"
+                image="./images/githired.png"
+              />
+
+              <Project
+                classNameProject="5"
+                changeCurrent={this.changeCurrent}
+                whichCurrent={this.state.current}
+                title="Remembook"
+                technology={this.state.remembook}
+                description="The 'anti-facebook' app. Not focus on your face but on your mind. Not focus on others's life but on yours."
+                linkToGit="https://git.generalassemb.ly/yvln-ga/project2-remembook"
+                linkToWeb="https://project-remembook.herokuapp.com/"
+                image="./images/remembook.png"
+              />
+
+              <Project
+                classNameProject="6"
+                changeCurrent={this.changeCurrent}
+                whichCurrent={this.state.current}
+                title="BattleShip"
+                technology={this.state.battleship}
+                description="The famous game BattleShip online. The first one to have sunk all of the other's ships wins!"
+                linkToGit="https://git.generalassemb.ly/yvln-ga/project1-battleship"
+                linkToWeb="https://git.generalassemb.ly/pages/yvln-ga/project1-battleship/"
+                image="./images/battleship.png"
+              />
+
+            </div>
+          </div>
+
+      </div>
     </div>
     );
   }

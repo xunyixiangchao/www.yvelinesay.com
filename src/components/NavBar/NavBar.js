@@ -41,10 +41,10 @@ class NavBar extends Component {
     return (
       <div className={`NavBar ${isFixed ? "NavBarFixed" : ""} `}>
         <div className="NavBarContainer">
-          <div className="navItem"><a href="#BrandStatementContainer">About Me</a></div>
-          <div className="navItem"><a href="#SkillsContainer">Skills</a></div>
-          <div className="navItem"><a href="#ProjectsContainer">Projects</a></div>
-          <div className="navItem"><a href="#ContactContainer">Contact</a></div>
+          <div className="navItem"><a href="#BrandStatementContainer">about me</a></div>
+          <div className="navItem"><a href="#SkillsContainer">skills</a></div>
+          <div className="navItem"><a href="#ProjectsContainer">projects</a></div>
+          <div className="navItem"><a href="#ContactContainer">contact</a></div>
           </div>
       </div>
     );

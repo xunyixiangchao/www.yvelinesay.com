@@ -12,7 +12,7 @@ class BasicInfo extends Component {
       greeting: ""
     }
   }
-  
+
   componentDidMount() {
     this.setGreeting();
   }
@@ -38,6 +38,7 @@ class BasicInfo extends Component {
     return (
       <div className="BasicInfoContent">
         <div className="BasicInfo">
+
           <div className='basicInfoGreeting'>
             {this.state.greeting}
           </div>
@@ -45,6 +46,7 @@ class BasicInfo extends Component {
           <div className='basicInfoP'>
             I am Yveline,  a passionate React Front-end Developer.
           </div>
+
         </div>
       </div>
     );
