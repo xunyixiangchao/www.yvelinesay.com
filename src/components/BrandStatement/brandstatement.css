@@ -24,15 +24,6 @@
       flex-direction: column;
     }
 
-    @keyframes fadein {
-      from {
-        opacity: 0;
-      }
-      to {
-        opacity: 1;
-      }
-    }
-
         .brandStatementP {
           width: 100%;
           text-align: justify;

@@ -6,20 +6,11 @@
 }
 
 .appearProjects {
-  animation: fadein 1s;
+  animation: fadein 1s ease;
   display: flex;
   flex-direction: column;
   align-items: center;
   overflow: hidden;
-}
-
-@keyframes fadein {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
 }
 
 .NavProject {
@@ -43,7 +34,7 @@
 .Projects {
   position: relative;
   overflow: hidden;
-  width: 78%;
+  width: 800px;
 }
 
 .ProjectsScroll {
@@ -54,7 +45,7 @@
   flex-wrap: nowrap;
   position: relative;
   transition: 1s;
-  left: -21vw;
+  left: -200px;
 }
 
 @media screen and (max-width: 850px) {
