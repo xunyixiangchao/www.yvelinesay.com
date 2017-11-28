@@ -8,8 +8,8 @@ class Skills extends Component {
     super(props);
 
     this.state = {
-      skillsF:["React JS", "jQuery", "JavaScript", "Electron", "Ruby", "CSS", "HTML"],
-      imagesF:["/images/react.png", "/images/jquery.png", "/images/JS.png", "/images/electron.png", "/images/ruby.png", "/images/css.png", "/images/html.png"],
+      skillsF:["React JS", "Redux", "jQuery", "JavaScript", "Electron", "Ruby", "CSS", "HTML"],
+      imagesF:["/images/react.png", "/images/redux.png", "/images/jquery.png", "/images/JS.png", "/images/electron.png", "/images/ruby.png", "/images/css.png", "/images/html.png"],
       skillsB:["Node JS", "Express JS", "Ruby on Rails", "RESTful API", "PSQL"],
       imagesB:["/images/nodejs.png", "/images/express.png", "/images/rubyonrails.png", "/images/restapi.png", "/images/psql.png"],
       appeared: false
