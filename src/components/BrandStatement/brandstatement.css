@@ -8,7 +8,6 @@
   position: relative;
   background-image: url("/images/webdev3.jpeg");
   background-size: cover;
-  pointer-events: none;
 }
 
     .BrandStatement {
@@ -44,6 +43,14 @@
   }
 
   .brandStatementP {
-    line-height: 28px;
+    font-size: 16px;
+    line-height: 35px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+
+  .brandStatementP {
+    line-height: 30px;
   }
 }

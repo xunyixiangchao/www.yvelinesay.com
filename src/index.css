@@ -30,3 +30,8 @@ a:hover {
   color: #97A4A8;
   cursor: crosshair;
 }
+
+p {
+  pointer-events: none;
+  margin: 0;
+}

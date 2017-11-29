@@ -88,8 +88,9 @@
       max-height: 25px;
     }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 800px) {
   .Project {
     min-width: 60vw;
+    max-width: 60vw;
   }
 }

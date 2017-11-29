@@ -27,12 +27,12 @@ class Project extends Component {
       <div className={`Project Project${this.props.classNameProject} ${this.props.whichCurrent === this.props.classNameProject ? 'currentProject' : 'notCurrentProject'}`}
            onClick={ () => {this.props.changeCurrent(this.props.classNameProject)} }>
         <div className="ProjectText">
-          <div className="title">{this.props.title}</div>
+          <p className="title">{this.props.title}</p>
           <div className="technology">{this.renderTechnology()}</div>
           <div className="paragraphContainer">
-            <div className="description">
+            <p className="description">
               {this.props.description}
-            </div>
+            </p>
             <div className="links">
               <a href={this.props.linkToGit} target="_blank"><img alt="gihub" src="./images/github.png" draggable="false" className="imgProject" /></a>
               <a href={this.props.linkToWeb} target="_blank"><img alt="web" src="./images/web.png" draggable="false" className="imgProject" /></a>

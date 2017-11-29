@@ -48,14 +48,13 @@
   left: -200px;
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 800px) {
   .Projects {
-    position: relative;
-    width: 100%;;
+    width: 100%;
   }
 
   .ProjectsScroll {
-    left: -10vw;
+    left: -40vw;
   }
 }
 
@@ -67,8 +66,16 @@
   .passiveButtonNavProject {
     width: 12px;
   }
+}
 
-  .ProjectsScroll {
-    left: -40vw;
+@media screen and (max-width: 580px) {
+  .Projects {
+    padding-top: 50px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .Projects {
+    padding-top: 100px;
   }
 }

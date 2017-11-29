@@ -13,7 +13,7 @@ class Box extends Component {
     this.props.skills.forEach( e => {
       eachSkill.push(
         <div className="skill"key={e}>
-          <div className="skillTitle">{e}</div>
+          <p className="skillTitle">{e}</p>
           <div className="skillImage">
             <img alt={this.props.imgSkills[this.props.skills.indexOf(e)]}
                  draggable="false"
@@ -28,7 +28,7 @@ class Box extends Component {
   render() {
     return (
       <div className="Box">
-        <div className="BoxTitle">{this.props.title}</div>
+        <p className="BoxTitle">{this.props.title}</p>
           <div className="skillContainer">
             {this.renderSkills()}
           </div>

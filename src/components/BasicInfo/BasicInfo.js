@@ -39,13 +39,13 @@ class BasicInfo extends Component {
       <div className="BasicInfoContent">
         <div className="BasicInfo">
 
-          <div className='basicInfoGreeting'>
+          <p className='basicInfoGreeting'>
             {this.state.greeting}
-          </div>
+          </p>
           <Clock />
-          <div className='basicInfoP'>
+          <p className='basicInfoP'>
             I am Yveline,  a passionate React Front-end Developer.
-          </div>
+          </p>
 
         </div>
       </div>
