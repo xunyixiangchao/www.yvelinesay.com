@@ -111,7 +111,7 @@ onScroll(event) {
                 title="Be EUrself"
                 technology={this.state.beeu}
                 description="Learn more about Europe in playing with this 6 mini-games"
-                linkToGit="https://github.com/yvln/REACT-final-project-ga"
+                linkToGit="https://github.com/yvln/beeu-react"
                 linkToWeb="https://beeurself.netlify.com/"
                 image="./images/beeu.png"
               />
@@ -135,7 +135,7 @@ onScroll(event) {
                 title="Remembook"
                 technology={this.state.remembook}
                 description="The 'anti-facebook' app. Not focus on your face but on your mind. Not focus on others's life but on yours."
-                linkToGit="https://git.generalassemb.ly/yvln-ga/project2-remembook"
+                linkToGit="https://github.com/yvln/remembook-express-jquery"
                 linkToWeb="https://project-remembook.herokuapp.com/"
                 image="./images/remembook.png"
               />
@@ -147,8 +147,8 @@ onScroll(event) {
                 title="BattleShip"
                 technology={this.state.battleship}
                 description="The famous game BattleShip online. The first one to have sunk all of the other's ships wins!"
-                linkToGit="https://git.generalassemb.ly/yvln-ga/project1-battleship"
-                linkToWeb="https://git.generalassemb.ly/pages/yvln-ga/project1-battleship/"
+                linkToGit="https://github.com/yvln/battleship-jquery"
+                linkToWeb="https://yvln.github.io/battleship-jquery/"
                 image="./images/battleship.png"
               />
 
