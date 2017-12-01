@@ -47,9 +47,8 @@ class Skills extends Component {
 
   toggleOpen(index) {
     const allBoxes = [...document.querySelectorAll('.BoxContainer')];
-    const boxClicked = allBoxes[parseInt(index)];
     allBoxes.forEach( e => {
-      (allBoxes.indexOf(e) !== parseInt(index))
+      (allBoxes.indexOf(e) !== parseInt(index, 10))
         ? e.classList.remove('open')
         : e.classList.toggle('open')
       })

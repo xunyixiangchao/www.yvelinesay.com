@@ -63,8 +63,8 @@ onScroll(event) {
     this.setState({
       current: which
     });
-    let howMany = parseInt(this.state.current) - parseInt(which);
-    this.scroll.style.left = `${this.scroll.offsetLeft + (howMany * parseInt(document.querySelector(".Project").offsetWidth))}px`;
+    let howMany = parseInt(this.state.current, 10) - parseInt(which, 10);
+    this.scroll.style.left = `${this.scroll.offsetLeft + (howMany * parseInt(document.querySelector(".Project").offsetWidth, 10))}px`;
   }
 
   render() {

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './footer.css';
-import Credits from "../Credits/Credits";
 
 class Footer extends Component {
   render() {
