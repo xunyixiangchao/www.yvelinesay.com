@@ -40,6 +40,7 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      
       position: relative;
       text-align: center;
     }
@@ -187,15 +188,5 @@
   }
   .skill {
     margin: 10px;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .skill {
-    margin: 5px;
-  }
-  .skillImage img {
-    max-width: 60px;
-    max-height: 30px;
   }
 }
