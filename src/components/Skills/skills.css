@@ -3,11 +3,10 @@
   min-height: 85vh;
   background-color: rgb(250,250,250);
   padding-top: 15vh;
-  pointer-events: none;
 }
 
 .Skills {
-  max-width: 78%;
+  max-width: 800px;
   width: 100%;
   margin: 0 auto;
 }

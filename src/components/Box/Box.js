@@ -27,11 +27,14 @@ class Box extends Component {
 
   render() {
     return (
-      <div className="Box">
-        <p className="BoxTitle">{this.props.title}</p>
+      <div className={`BoxContainer BoxContainer${this.props.index}`} onClick={() => {this.props.toggleOpen(this.props.index)}}>
+        <div className='BoxContent'>
+          <div className={`Box Box${this.props.index}`}></div>
+          <p className="BoxTitle">{this.props.title}</p>
           <div className="skillContainer">
             {this.renderSkills()}
           </div>
+        </div>
       </div>
     );
   }

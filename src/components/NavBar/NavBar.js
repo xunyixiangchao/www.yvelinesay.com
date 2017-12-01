@@ -42,7 +42,7 @@ class NavBar extends Component {
       <div className={`NavBar ${isFixed ? "NavBarFixed" : ""} `}>
         <div className="NavBarContainer">
           <div className="navItem"><a href="#BrandStatementContainer">about me</a></div>
-          <div className="navItem"><a href="#SkillsContainer">skills</a></div>
+          <div className="navItem"><a href="#SkillsContainer">passions</a></div>
           <div className="navItem"><a href="#ProjectsContainer">projects</a></div>
           <div className="navItem"><a href="#ContactContainer">contact</a></div>
           </div>
