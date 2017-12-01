@@ -11,6 +11,10 @@
     flex 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
 }
 
+.BoxContainer:hover .Box {
+  filter: opacity(70%);
+}
+
 .BoxContainer.open {
   flex:4;
   transition:
@@ -82,40 +86,41 @@
   font-weight: normal;
   top: 45%;
   transform: rotate(-90deg);
+  letter-spacing: 5px;
   transition:
     transform 1s,
     font-size 0.5s,
     top 0.2s,
-    color 0.5s;
+    color 0.5s,
+    letter-spacing 1s;
 }
 
 .BoxContainer.open .BoxTitle {
   font-weight: 900;
   top: 25px;
   transform: rotate(0);
+  letter-spacing: 2px;
   transition:
     transform 1s,
     font-size 0.5s,
     top 0.2s,
-    color 0.5s;
+    color 0.5s,
+    letter-spacing 1s;
 }
 
-      .BoxContainer0 .BoxTitle {
+      .BoxContainer0 .BoxTitle, .BoxContainer1 .BoxTitle, .BoxContainer3 .BoxTitle {
         color: white;
       }
 
       .BoxContainer0.open .BoxTitle {
         color: rgb(87,115,65);
       }
-
       .BoxContainer1.open .BoxTitle {
         color: rgb(191,140,30);
       }
-
       .BoxContainer2.open .BoxTitle {
         color: rgb(185,28,24);
       }
-
       .BoxContainer3.open .BoxTitle {
         color: #29617D;
       }
@@ -127,7 +132,7 @@
   flex-wrap: wrap;
   align-items: center;
   margin-top: 60px;
-  transform: translateY(-500%);
+  transform: translateY(500%);
   transition:
     transform 1.5s,
 }
@@ -153,44 +158,42 @@
 
 @media screen and (max-width: 850px) {
   .BoxTitle {
-    font-size: 25px;
+    font-size: 30px;
+    font-weight: 900;
   }
   .skillTitle {
     font-size: 18px;
   }
-  .imgSkill {
-    width: 80px;
-    min-height: 40px;
-    height: 96px;
+  .skillImage img {
+    max-width: 80px;
+    max-height: 40px;
   }
 }
 
 @media screen and (max-width: 640px) {
   .BoxTitle {
-    font-size: 20px;
+    font-size: 25px;
   }
   .skillTitle {
     font-size: 15px;
   }
-  .imgSkill {
-    width: 70px;
-    min-height: 35px;
-    height: 84px;
-  }
 }
 
 @media screen and (max-width: 550px) {
-  .BoxContainer {
-    height: 500px;
+  .BoxTitle {
+    font-size: 20px;
   }
-
-  .Box {
-    height: 600px;
+  .skill {
+    margin: 10px;
   }
 }
 
 @media screen and (max-width: 480px) {
   .skill {
-    margin: 15px;
+    margin: 5px;
+  }
+  .skillImage img {
+    max-width: 60px;
+    max-height: 30px;
   }
 }

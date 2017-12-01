@@ -4,15 +4,31 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   position: relative;
   background-image: url("/images/webdev3.jpeg");
   background-size: cover;
 }
 
+      .trianglebrandStatement {
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        z-index: 2;
+      }
+
+          .arrowbrandStatement {
+            width: 0;
+            height: 0;
+            border-right: 50vw solid rgb(250,250,250);
+            border-bottom: 3vw solid rgb(250,250,250);
+            border-left: 50vw solid transparent;
+            border-top: 3vw solid transparent;
+          }
+
     .BrandStatement {
-      margin-left: 49%;
-      max-width: 40%;
+      max-width: 78%;
+      margin: 0 auto;
       color: black;
       text-shadow: 1px 1px 1px white;
     }
@@ -20,21 +36,57 @@
     .appearBrandStat {
       animation: fadein 1s;
       display: flex;
-      flex-direction: column;
+      justify-content: space-between;
     }
 
-        .brandStatementP {
-          width: 100%;
-          text-align: justify;
-          line-height: 35px;
-          font-size: 18px;
+        .mypicDiv {
+          width: 30%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
         }
+
+            .mypic {
+              width: 100%;
+              border-radius: 7px;
+            }
+
+
+        .brandStatementPContainer {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 60%;
+        }
+
+            .brandStatementP {
+              margin: 0 auto;
+              text-align: justify;
+              line-height: 35px;
+              font-size: 18px;
+            }
 
 @media screen and (max-width: 850px) {
   .BrandStatement {
-    margin-left: 11%;
-    max-width: 78%;
+    max-width: 90%;
   }
+
+  .appearBrandStat {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+      .brandStatementPContainer {
+        margin-top: 30px;
+        width: 100%;
+      }
+
+          .brandStatementP {
+            font-size: 16px;
+            line-height: 35px;
+          }
+
 }
 
 @media screen and (max-width: 640px) {
@@ -42,15 +94,23 @@
     padding-top: 13vh;
   }
 
-  .brandStatementP {
-    font-size: 16px;
-    line-height: 35px;
-  }
+      .mypicDiv {
+        width: 40%;
+      }
+
+      .brandStatementP {
+        font-size: 14px;
+        line-height: 27px;
+      }
 }
 
 @media screen and (max-width: 400px) {
 
+  .mypicDiv {
+    width: 50%;
+  }
+
   .brandStatementP {
-    line-height: 30px;
+    line-height: 25px;
   }
 }

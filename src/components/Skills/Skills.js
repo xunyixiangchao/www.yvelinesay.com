@@ -80,6 +80,11 @@ class Skills extends Component {
             imgSkills={this.state.imagesO}
             />
         </div>
+
+        <div className="triangleskills">
+          <div className="arrowskills"></div>
+        </div>
+
       </div>
     );
   }

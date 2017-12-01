@@ -1,0 +1,55 @@
+.CreditsContainer {
+  width: 100%;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  margin-top: 6vw;
+  padding-bottom: 6vw;
+  text-align: left;
+  position: relative;
+}
+
+    .trianglecredits {
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+    }
+
+        .arrowcredits {
+          width: 0;
+          height: 0;
+          border-right: 50vw solid white;
+          border-top: 3vw solid transparent;
+          border-left: 50vw solid transparent;
+          border-bottom: 3vw solid white;
+        }
+
+    .Credits {
+      margin: 0 auto;
+    }
+
+        .Credits a {
+          color: #F0B9AD;
+        }
+
+        .Credits a:hover {
+          color: white;
+        }
+
+        .websites {
+          font-size: 13px;
+          padding: 10px 0;
+        }
+
+        .itemListCredit {
+          font-size: 11px;
+          padding: 0 0 0 10px;
+        }
+
+            .passiontitle {
+              color: grey;
+              padding-left: 20px;
+            }
