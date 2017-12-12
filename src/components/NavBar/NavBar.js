@@ -38,10 +38,7 @@ class NavBar extends Component {
   }
 
   // onClickSmooth(event) {
-  //   const cible = event.target.getAttribute('href');
-  //   const topCible = window.pageYOffset || document.documentElement.scrollTop;
-  //   console.log(topCible);
-  //   setTimeOut()
+  //   smoothScroll(event.target);
   // }
 
   render() {
