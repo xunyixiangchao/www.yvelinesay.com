@@ -14,7 +14,7 @@
         .trianglefooter {
           width: 100%;
           position: absolute;
-          bottom: -6vw;
+          bottom: -4vw;
         }
 
             .arrowfooter {
@@ -55,6 +55,7 @@
 .pfooter.credits {
   color: black;
   font-size: smaller;
+  cursor: crosshair;
 }
 
 .heartfooter {

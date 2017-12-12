@@ -53,7 +53,7 @@ class NavBar extends Component {
           <div className="navItem" onClick={this.onClickSmooth}><a href="#passions">passions</a></div>
           <div className="navItem" onClick={this.onClickSmooth}><a href="#projects">projects</a></div>
           <div className="navItem" onClick={this.onClickSmooth}><a href="#contact">contact</a></div>
-          </div>
+        </div>
       </div>
     );
   }
