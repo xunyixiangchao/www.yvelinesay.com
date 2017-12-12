@@ -36,7 +36,7 @@ class Contact extends Component {
 
   render() {
     return (
-      <div id="ContactContainer">
+      <div id="contact">
         <div className={`Contact ${this.state.appeared ? 'appearContact' : 'hide'}`}>
 
           <div className="HireMe">

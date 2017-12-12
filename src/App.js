@@ -12,7 +12,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {credits:false}
-    this.toggleCredits = this.toggleCredits.bind(this);
+    this.toggleCredijuts = this.toggleCredits.bind(this);
   }
 
   toggleCredits() {

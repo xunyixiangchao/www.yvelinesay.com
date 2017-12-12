@@ -11,6 +11,7 @@ class NavBar extends Component {
     }
 
     this.onScroll = this.onScroll.bind(this);
+    // this.onClickSmooth = this.onClickSmooth.bind(this);
   }
 
   componentWillMount() {
@@ -23,7 +24,7 @@ class NavBar extends Component {
 
   onScroll(event) {
     const { isFixed } = this.state;
-    const top  = window.pageYOffset || document.documentElement.scrollTop;
+    const top = window.pageYOffset || document.documentElement.scrollTop;
 
     if ((top > window.innerHeight * 0.9) && !isFixed) {
       this.setState({
@@ -36,15 +37,22 @@ class NavBar extends Component {
     }
   }
 
+  // onClickSmooth(event) {
+  //   const cible = event.target.getAttribute('href');
+  //   const topCible = window.pageYOffset || document.documentElement.scrollTop;
+  //   console.log(topCible);
+  //   setTimeOut()
+  // }
+
   render() {
     const { isFixed } = this.state;
     return (
       <div className={`NavBar ${isFixed ? "NavBarFixed" : ""} `}>
         <div className="NavBarContainer">
-          <div className="navItem"><a href="#BrandStatementContainer">about me</a></div>
-          <div className="navItem"><a href="#SkillsContainer">passions</a></div>
-          <div className="navItem"><a href="#ProjectsContainer">projects</a></div>
-          <div className="navItem"><a href="#ContactContainer">contact</a></div>
+          <div className="navItem" onClick={this.onClickSmooth}><a href="#about-me">about me</a></div>
+          <div className="navItem" onClick={this.onClickSmooth}><a href="#passions">passions</a></div>
+          <div className="navItem" onClick={this.onClickSmooth}><a href="#projects">projects</a></div>
+          <div className="navItem" onClick={this.onClickSmooth}><a href="#contact">contact</a></div>
           </div>
       </div>
     );

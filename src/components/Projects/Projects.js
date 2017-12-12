@@ -69,7 +69,7 @@ onScroll(event) {
 
   render() {
     return (
-      <div id="ProjectsContainer">
+      <div id="projects">
         <div className={this.state.appeared ? 'appearProjects' : 'hide'}>
 
           <div className="NavProject">

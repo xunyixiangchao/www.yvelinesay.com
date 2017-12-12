@@ -37,7 +37,7 @@ class BrandStatement extends Component {
 
   render() {
     return (
-      <div id='BrandStatementContainer'>
+      <div id='about-me'>
         <div className={`BrandStatement ${this.state.appeared ? 'appearBrandStat' : 'hide'}`}>
 
           <div className='mypicDiv'>

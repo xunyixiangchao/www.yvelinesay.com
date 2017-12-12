@@ -56,7 +56,7 @@ class Skills extends Component {
 
   render() {
     return (
-      <div id="SkillsContainer">
+      <div id="passions">
         <div className={`Skills ${this.state.appeared ? 'appearSkills' : 'hide'}`}>
           <Box title={"Front-End"} index='0'
             toggleOpen={this.toggleOpen}
