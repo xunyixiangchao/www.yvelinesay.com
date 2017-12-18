@@ -1,16 +1,15 @@
 .ProjectContainer {
   width: 100%;
-  height: 60vh;
   position: relative;
   padding-top: 6vh;
 }
 
     .Project {
       display: flex;
-      height: 100%;
       justify-content: center;
-      align-items: center;
+      align-items: flex-start;
       overflow: hidden;
+      padding: 40px 0;
     }
     .appearedProject {
       animation: fadein 1s ease;
@@ -38,7 +37,7 @@
           height: 100%;
           display: flex;
           justify-content: center;
-          align-items: center;
+          align-items: flex-start;
         }
 
             .ProjectText {
@@ -58,23 +57,23 @@
                   align-items: flex-start;
                 }
 
-                .title {
-                  font-size: 35px;
-                }
-
-                .technology {
-                  display: flex;
-                  flex-wrap: wrap;
-                  justify-content: center;
-                  align-items: center;
-                }
-
-                    .skilltechno {
-                      align-self: center;
-                      max-width: 50px;
-                      max-height: 30px;
-                      margin: 3px;
+                    .title {
+                      font-size: 35px;
                     }
+
+                    .technology {
+                      display: flex;
+                      flex-wrap: wrap;
+                      justify-content: center;
+                      align-items: center;
+                    }
+
+                        .skilltechno {
+                          align-self: center;
+                          max-width: 50px;
+                          max-height: 30px;
+                          margin: 3px;
+                        }
 
                 .description {
                   font-size: 18px;
@@ -84,6 +83,10 @@
                 .accessProject {
                   display: flex;
                   align-items: center;
+                }
+
+                .titleContainer, .description, .accessProject {
+                  margin-bottom: 30px;
                 }
 
                     .linkToProject {
