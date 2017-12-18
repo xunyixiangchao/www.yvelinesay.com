@@ -19,6 +19,11 @@ class Project extends Component {
 
   componentDidMount() {
     this.projectContainer.style.backgroundColor = this.props.color;
+    if (this.props.top%2 === 0) {
+      this.project.style.flexDirection = 'row';
+    } else {
+      this.project.style.flexDirection = 'row-reverse';
+    }
   }
 
   onScroll = (event) => {
@@ -42,7 +47,7 @@ class Project extends Component {
   render() {
     return (
       <div className="ProjectContainer" ref={element => this.projectContainer = element}>
-          <div className={`Project ${this.state.appeared ? 'appearedProject' : 'hide'}`}>
+          <div className={`Project ${this.state.appeared ? 'appearedProject' : 'hide'}`} ref={element => this.project = element}>
             <div className="ProjectTextContainer">
               <div className="ProjectText">
                 <div className="titleContainer">
