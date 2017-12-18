@@ -4,6 +4,7 @@ import './aboutme.css';
 import BasicInfo from "../BasicInfo/BasicInfo";
 import NavBar from "../NavBar/NavBar";
 import BrandStatement from "../BrandStatement/BrandStatement";
+import Separator from "../Separator/Separator";
 
 class AboutMe extends Component {
 
@@ -13,6 +14,12 @@ class AboutMe extends Component {
         <BasicInfo />
         <NavBar />
         <BrandStatement />
+        <Separator
+          positionPage="Bottom"
+          positionSeparator="0"
+          rightAngle="Left"
+          color="rgb(250,250,250)"
+        />
       </div>
     );
   }

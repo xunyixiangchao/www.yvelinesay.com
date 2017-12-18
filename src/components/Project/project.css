@@ -1,96 +1,176 @@
-.Project {
-  min-width: 400px;
-  height: 100%;
-}
-
-    .Project .imageProject {
-      transition: 1s;
-      width: 100%;
-      height: auto;
-    }
-
-    .currentProject .imageProject {
-      filter: brightness(100%);
-    }
-
-    .currentProject .ProjectText {
-      color: black;
-    }
-
-    .currentProject img {
-      transition: 1s;
-      filter: opacity(100%);
-    }
-
-    .notCurrentProject .imageProject {
-      filter: brightness(40%);
-    }
-
-    .notCurrentProject .imageProject:hover {
-      filter: brightness(60%);
-    }
-
-    .notCurrentProject .ProjectText {
-      color: #fafafa;
-    }
-
-    .notCurrentProject img {
-      transition: 1s;
-      filter: opacity(10%);
-    }
-
-.ProjectText {
-  transition: 1s;
+.ProjectContainer {
   width: 100%;
-  height: 130px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
+  height: 60vh;
+  position: relative;
+  padding-top: 6vh;
 }
 
-    .title {
-      font-size: 30px;
-    }
-
-    .technology {
+    .Project {
       display: flex;
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+    .appearedProject {
+      animation: fadein 1s ease;
+      opacity: 1;
+      transform: translateY(0);
     }
 
-        .skilltechno {
-          align-self: center;
-          max-width: 40px;
-          max-height: 25px;
+        .imageProjectDivContainer {
+          flex: 1;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          pointer-events: none;
         }
 
-    .paragraphContainer {
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+            .imageProject {
+              max-height: 45vh;
+              max-width: 490px;
+              width: auto;
+            }
 
-    .description {
-      font-size: 12px;
-      text-align: center;
-      flex: 5;
-      padding: 0 10px;
-    }
+        .ProjectTextContainer {
+          flex: 1;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
 
-    .links {
-      text-align: right;
-      width: 100%;
-      flex: 1;
-    }
+            .ProjectText {
+              height: 80%;
+              width: 80%;
+              margin: 0 auto;
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+              align-items: flex-start;
+            }
 
-    .imgProject {
-      max-width: 25px;
-      max-height: 25px;
-    }
+                .titleContainer {
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: center;
+                  align-items: flex-start;
+                }
 
-@media screen and (max-width: 800px) {
-  .Project {
-    min-width: 60vw;
-    max-width: 60vw;
+                .title {
+                  font-size: 35px;
+                }
+
+                .technology {
+                  display: flex;
+                  flex-wrap: wrap;
+                  justify-content: center;
+                  align-items: center;
+                }
+
+                    .skilltechno {
+                      align-self: center;
+                      max-width: 50px;
+                      max-height: 30px;
+                      margin: 3px;
+                    }
+
+                .description {
+                  font-size: 18px;
+                  text-align: left;
+                }
+
+                .accessProject {
+                  display: flex;
+                  align-items: center;
+                }
+
+                    .linkToProject {
+                      padding: 15px;
+                      margin-right: 10px;
+                      border-radius: 4px;
+                      color: white;
+                      font-size: 13px;
+                      text-align: center;
+                    }
+                        .linkToProject:hover {
+                          color: white;
+                        }
+
+                            .linkToProject.github {
+                              background-color: rgba(37,41,46,.7);
+                            }
+                                .linkToProject.github:hover {
+                                  background-color: rgba(37,41,46,1);
+                                }
+                            .linkToProject.web {
+                              background-color: rgba(0,0,250,.7);
+                            }
+                                .linkToProject.web:hover {
+                                  background-color: rgba(0,0,250,1);
+                                }
+
+@media screen and (max-width: 740px) {
+  .ProjectText{
+    max-height: 40vh;
   }
+  .imageProject {
+    max-height: 40vh;
+    max-width: 400px;
+    width: auto;
+  }
+  .title {
+    font-size: 30px;
+  }
+  .skilltechno {
+    max-width: 35px;
+    max-height: 20px;
+  }
+  .description {
+    font-size: 15px;
+  }
+  .linkToProject {
+    padding: 12px;
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 611px) {
+
+  .ProjectContainer {
+    height: 100%;
+  }
+
+  .Project {
+    flex-direction: column-reverse;
+  }
+
+      .imageProjectDivContainer {
+        flex: 1;
+        margin-top: 50px;
+      }
+
+          .imageProject {
+            max-height: 100%;
+            max-width: 90%;
+          }
+
+      .ProjectTextContainer {
+        flex: 1;
+        margin: 25px 0 50px 0;
+      }
+
+         .ProjectText {
+           align-items: center;
+          }
+
+            .titleContainer {
+              align-items: center;
+            }
+
+                .titleContainer, .description, .accessProject {
+                  margin: 10px 0;
+                }
+
 }

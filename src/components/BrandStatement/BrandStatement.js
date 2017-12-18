@@ -28,10 +28,6 @@ class BrandStatement extends Component {
       this.setState({
         appeared: true
       })
-    } else if ((top < window.innerHeight * 0.1) && (this.state.appeared)) {
-      this.setState({
-        appeared: false
-      })
     }
   }
 
@@ -54,10 +50,6 @@ class BrandStatement extends Component {
             </p>
           </div>
 
-        </div>
-
-        <div className='trianglebrandStatement'>
-          <div className='arrowbrandStatement'></div>
         </div>
 
       </div>

@@ -10,22 +10,6 @@
   background-size: cover;
 }
 
-      .trianglebrandStatement {
-        width: 100%;
-        position: absolute;
-        bottom: 0;
-        z-index: 2;
-      }
-
-          .arrowbrandStatement {
-            width: 0;
-            height: 0;
-            border-right: 50vw solid rgb(250,250,250);
-            border-bottom: 3vw solid rgb(250,250,250);
-            border-left: 50vw solid transparent;
-            border-top: 3vw solid transparent;
-          }
-
     .BrandStatement {
       max-width: 78%;
       margin: 0 auto;

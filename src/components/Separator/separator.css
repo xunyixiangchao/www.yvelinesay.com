@@ -1,0 +1,10 @@
+.containerSeparator {
+  width: 100%;
+  position: absolute;
+  z-index: 2;
+}
+
+.separator {
+  width: 0;
+  height: 0;
+}

@@ -30,9 +30,9 @@ class App extends Component {
           <Footer
             toggleCredits={this.toggleCredits}
             credits={this.state.credits} />
-          {this.state.credits &&
-            <Credits />
-          }
+            {this.state.credits &&
+              <Credits />
+            }
         </div>
       </div>
     );
