@@ -6,23 +6,33 @@ import Separator from "../Separator/Separator";
 class Project extends Component {
 
   state = {
-    appeared: false
+    appeared: false,
   }
 
   componentWillMount() {
     document.addEventListener('scroll', this.onScroll);
+    window.addEventListener('resize', this.onResize);
   }
 
   componentWillUnmount() {
     document.removeEventListener('scroll', this.onSrcoll);
+    window.removeEventListener('resize', this.onResize);
   }
 
   componentDidMount() {
     this.projectContainer.style.backgroundColor = this.props.color;
-    if (this.props.top%2 === 0) {
-      this.project.style.flexDirection = 'row';
+    this.onResize();
+  }
+
+  onResize = (event) => {
+    if (window.innerWidth > 611) {
+      if (this.props.top%2 === 0) {
+        this.project.style.flexDirection = 'row';
+      } else {
+        this.project.style.flexDirection = 'row-reverse';
+      }
     } else {
-      this.project.style.flexDirection = 'row-reverse';
+        this.project.style.flexDirection = 'column-reverse';
     }
   }
 
