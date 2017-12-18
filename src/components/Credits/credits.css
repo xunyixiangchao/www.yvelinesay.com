@@ -6,8 +6,8 @@
   justify-content: center;
   align-items: center;
   color: white;
-  margin-top: 4vw;
-  padding-bottom: 6vw;
+  margin-top: 6vh;
+  padding-bottom: 2vh;
   text-align: left;
   position: relative;
 }
@@ -22,9 +22,9 @@
           width: 0;
           height: 0;
           border-right: 50vw solid white;
-          border-top: 3vw solid transparent;
+          border-top: 2vh solid transparent;
           border-left: 50vw solid transparent;
-          border-bottom: 3vw solid white;
+          border-bottom: 2vh solid white;
         }
 
     .Credits {

@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './footer.css';
 
+import Separator from "../Separator/Separator";
+
 class Footer extends Component {
   render() {
     return (
@@ -13,9 +15,11 @@ class Footer extends Component {
           <div className="pfooter credits" onClick={this.props.toggleCredits}>credits &#8595;</div>
         </div>
         {this.props.credits &&
-          <div className="trianglefooter">
-            <div className="arrowfooter"></div>
-          </div>
+          <Separator
+            positionPage="Bottom"
+            positionSeparator="-6vh"
+            rightAngle='Left'
+            color='black '/>
         }
       </div>
     );

@@ -27,11 +27,6 @@ class Credits extends Component {
             </div>
 
         </div>
-
-          <div className="trianglecredits">
-            <div className="arrowcredits"></div>
-          </div>
-
       </div>
     );
   }
