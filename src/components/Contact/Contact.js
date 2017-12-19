@@ -23,7 +23,7 @@ class Contact extends Component {
   onScroll(event) {
     const top  = window.pageYOffset || document.documentElement.scrollTop;
 
-    if ((top > window.innerHeight * 6.3) && (!this.state.appeared)) {
+    if ((top > window.innerHeight * 6) && (!this.state.appeared)) {
       this.setState({
         appeared: true
       })
