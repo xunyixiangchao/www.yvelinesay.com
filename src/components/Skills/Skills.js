@@ -13,7 +13,7 @@ class Skills extends Component {
     imagesB:["/images/nodejs.png", "/images/express.png", "/images/rubyonrails.png", "/images/restapi.png", "/images/psql.png"],
     skillsT:["Atom", "Hyper", "Slack", "Github", "Spotify", "Postman", "Expo"],
     imagesT:["/images/atom.png", "/images/hyper.gif", "/images/slack.png", "/images/github.png", "/images/spotify.png", "/images/postman.png", "/images/expo.png"],
-    skillsO:["Piano", "Travel", "Cook", "Social Media"],
+    skillsO:["Piano", "Travel", "Cooking", "Social Media"],
     imagesO:["/images/piano.png", "/images/travel.png", "/images/cook.png", "/images/socialmedia.png"],
     appeared: false,
   }

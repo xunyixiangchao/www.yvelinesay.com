@@ -21,9 +21,14 @@ class Contact extends Component {
   }
 
   onScroll(event) {
+    const doc = document.documentElement.scrollHeight;
+    const page = window.innerHeight;
     const top  = window.pageYOffset || document.documentElement.scrollTop;
 
-    if ((top > window.innerHeight * 6) && (!this.state.appeared)) {
+    console.log("top", top);
+    console.log("doc - (page*1.5)", doc - (page*1.5));
+
+    if ((top >= doc - (page*1.5)) && (!this.state.appeared)) {
       this.setState({
         appeared: true
       })
