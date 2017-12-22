@@ -2,14 +2,8 @@ import React, { Component } from 'react';
 import './contact.css';
 
 class Contact extends Component {
-  constructor(props) {
-    super(props)
-
-    this.state = {
-      appeared: false
-    }
-
-    this.onScroll = this.onScroll.bind(this);
+  state = {
+    appeared: false
   }
 
   componentWillMount() {
@@ -20,15 +14,14 @@ class Contact extends Component {
     document.removeEventListener('scroll', this.onScroll);
   }
 
-  onScroll(event) {
+  onScroll = (event) => {
+    const { appeared } = this.state;
+
     const doc = document.documentElement.scrollHeight;
     const page = window.innerHeight;
     const top  = window.pageYOffset || document.documentElement.scrollTop;
 
-    console.log("top", top);
-    console.log("doc - (page*1.5)", doc - (page*1.5));
-
-    if ((top >= doc - (page*1.5)) && (!this.state.appeared)) {
+    if ((top >= doc - (page*1.5)) && (!appeared)) {
       this.setState({
         appeared: true
       })
@@ -36,9 +29,10 @@ class Contact extends Component {
   }
 
   render() {
+    const { appeared } = this.state;
     return (
       <div id="contact">
-        <div className={`Contact ${this.state.appeared ? 'appearContact' : 'hide'}`}>
+        <div className={`Contact ${appeared ? 'appearContact' : 'hide'}`}>
 
           <div className="HireMe">
             <p className="HireMeEn">

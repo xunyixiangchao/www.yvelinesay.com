@@ -1,10 +1,9 @@
 import React, { Component } from "react";
+import Project from "../Project/Project";
 import "./projects.css";
 
-import Project from "../Project/Project";
 
 class Projects extends Component {
-
   state = {
     allproject: ["1", "2", "3", "4", "5", "6"],
     calendar: ["Redux", "React", "css"],
@@ -16,12 +15,11 @@ class Projects extends Component {
   }
 
   render() {
-    const {calendar, meteo, beeu, githired, remembook, battleship} = this.state;
+    const { calendar, meteo, beeu, githired, remembook, battleship } = this.state;
     return (
     <div id="projects">
 
       <div className="Projects">
-
 
           <Project
             title="Meteo Fly High"

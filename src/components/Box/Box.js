@@ -1,36 +1,39 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import './box.css';
 
 class Box extends Component {
-  constructor(props){
-    super(props);
-
-    this.renderSkills = this.renderSkills.bind(this);
+  static propTypes = {
+    imgSkills: PropTypes.array.isRequired,
+    skills: PropTypes.array.isRequired,
+    index: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    toggleOpen: PropTypes.func.isRequired,
   }
 
-  renderSkills() {
-    const eachSkill = [];
-    this.props.skills.forEach( e => {
-      eachSkill.push(
+  renderSkills = () => {
+    const { imgSkills, skills } = this.props;
+    return skills.map( e => {
+      return(
         <div className="skill"key={e}>
           <p className="skillTitle">{e}</p>
           <div className="skillImage">
-            <img alt={this.props.imgSkills[this.props.skills.indexOf(e)]}
+            <img alt={imgSkills[skills.indexOf(e)]}
                  draggable="false"
-                 src={this.props.imgSkills[this.props.skills.indexOf(e)]} />
+                 src={imgSkills[skills.indexOf(e)]} />
           </div>
         </div>
       )
     })
-    return eachSkill;
   }
 
   render() {
+    const { index, title, toggleOpen } = this.props;
     return (
-      <div className={`BoxContainer BoxContainer${this.props.index}`} onClick={() => {this.props.toggleOpen(this.props.index)}}>
+      <div className={`BoxContainer BoxContainer${index}`} onClick={() => {toggleOpen(index)}}>
         <div className='BoxContent'>
-          <div className={`Box Box${this.props.index}`}></div>
-          <p className="BoxTitle">{this.props.title}</p>
+          <div className={`Box Box${index}`}></div>
+          <p className="BoxTitle">{title}</p>
           <div className="skillContainer">
             {this.renderSkills()}
           </div>

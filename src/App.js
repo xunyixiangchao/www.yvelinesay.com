@@ -1,25 +1,24 @@
 import React, { Component } from 'react';
-import './App.css';
-
 import AboutMe from "./components/AboutMe/AboutMe";
 import Skills from "./components/Skills/Skills";
 import Projects from "./components/Projects/Projects";
 import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
 import Credits from "./components/Credits/Credits";
+import './App.css';
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {credits:false}
-    this.toggleCredits = this.toggleCredits.bind(this);
+  state = {
+    credits:false
   }
 
-  toggleCredits() {
-    this.state.credits ? this.setState({credits:false}) : this.setState({credits:true})
+  toggleCredits = () => {
+    const { credits } = this.state;
+    credits ? this.setState({credits:false}) : this.setState({credits:true})
   }
 
   render() {
+    const { credits } = this.state;
     return (
       <div className="App">
         <div className="Content">
@@ -29,8 +28,8 @@ class App extends Component {
           <Contact />
           <Footer
             toggleCredits={this.toggleCredits}
-            credits={this.state.credits} />
-            {this.state.credits &&
+            credits={credits} />
+            {credits &&
               <Credits />
             }
         </div>

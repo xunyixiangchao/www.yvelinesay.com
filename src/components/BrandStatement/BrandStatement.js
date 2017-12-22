@@ -1,16 +1,9 @@
 import React, { Component } from 'react';
 import './brandstatement.css';
 
-
 class BrandStatement extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      appeared: false
-    }
-
-    this.onScroll = this.onScroll.bind(this);
+  state = {
+    appeared: false
   }
 
   componentWillMount() {
@@ -21,7 +14,7 @@ class BrandStatement extends Component {
     document.removeEventListener('scroll', this.onScroll);
   }
 
-  onScroll(event) {
+  onScroll = (event) => {
     const top  = window.pageYOffset || document.documentElement.scrollTop;
 
     if ((top > window.innerHeight * 0.2) && (!this.state.appeared)) {

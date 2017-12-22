@@ -1,23 +1,17 @@
 import React, { Component } from 'react';
+import Clock from '../Clock/Clock';
 import './basicinfo.css';
 
-import Clock from '../Clock/Clock';
-
 class BasicInfo extends Component {
-
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      greeting: ""
-    }
+  state = {
+    greeting: ''
   }
 
   componentDidMount() {
     this.setGreeting();
   }
 
-  setGreeting() {
+  setGreeting = () => {
     const timeNow = new Date().getHours();
     if ((timeNow >= 5) && (timeNow < 12)) {
       this.setState({
@@ -35,12 +29,13 @@ class BasicInfo extends Component {
   }
 
   render() {
+    const { greeting } = this.state;
     return (
       <div className="BasicInfoContent">
         <div className="BasicInfo">
 
           <p className='basicInfoGreeting'>
-            {this.state.greeting}
+            {greeting}
           </p>
           <Clock />
           <p className='basicInfoP'>

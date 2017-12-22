@@ -1,17 +1,9 @@
 import React, { Component } from 'react';
-
 import './navbar.css';
 
 class NavBar extends Component {
-  constructor(props) {
-    super(props)
-
-    this.state = {
-      isFixed: false
-    }
-
-    this.onScroll = this.onScroll.bind(this);
-    // this.onClickSmooth = this.onClickSmooth.bind(this);
+  state = {
+    isFixed: false
   }
 
   componentWillMount() {
@@ -22,7 +14,7 @@ class NavBar extends Component {
     document.removeEventListener('scroll', this.onScroll);
   }
 
-  onScroll(event) {
+  onScroll = (event) => {
     const { isFixed } = this.state;
     const top = window.pageYOffset || document.documentElement.scrollTop;
 
@@ -36,10 +28,6 @@ class NavBar extends Component {
       })
     }
   }
-
-  // onClickSmooth(event) {
-  //   smoothScroll(event.target);
-  // }
 
   render() {
     const { isFixed } = this.state;

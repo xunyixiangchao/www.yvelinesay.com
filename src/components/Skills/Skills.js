@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
-import './skills.css';
-
 import Box from '../Box/Box';
 import Separator from "../Separator/Separator";
+import './skills.css';
 
 class Skills extends Component {
-
   state = {
     skillsF:["React JS", "Redux", "jQuery", "JavaScript", "Electron", "Ruby", "CSS", "HTML"],
     imagesF:["/images/react.png", "/images/redux.png", "/images/jquery.png", "/images/JS.png", "/images/electron.png", "/images/ruby.png", "/images/css.png", "/images/html.png"],
@@ -27,9 +25,9 @@ class Skills extends Component {
   }
 
   onScroll = (event) => {
+    const { appeared } = this.state;
     const top  = window.pageYOffset || document.documentElement.scrollTop;
-
-    if ((top > window.innerHeight * 1.2) && (!this.state.appeared)) {
+    if ((top > window.innerHeight * 1.2) && (!appeared)) {
       this.setState({
         appeared: true
       })
@@ -46,28 +44,29 @@ class Skills extends Component {
   }
 
   render() {
+    const { appeared, skillsF, imagesF, skillsB, imagesB, skillsT, imagesT, skillsO, imagesO } = this.state;
     return (
       <div id="passions">
-        <div className={`Skills ${this.state.appeared ? 'appearSkills' : 'hide'}`}>
+        <div className={`Skills ${appeared ? 'appearSkills' : 'hide'}`}>
           <Box title={"Front-End"} index='0'
             toggleOpen={this.toggleOpen}
-            skills={this.state.skillsF}
-            imgSkills={this.state.imagesF}
+            skills={skillsF}
+            imgSkills={imagesF}
             />
           <Box title={"Back-End"} index='1'
             toggleOpen={this.toggleOpen}
-            skills={this.state.skillsB}
-            imgSkills={this.state.imagesB}
+            skills={skillsB}
+            imgSkills={imagesB}
             />
           <Box title={"Tools"} index='2'
             toggleOpen={this.toggleOpen}
-            skills={this.state.skillsT}
-            imgSkills={this.state.imagesT}
+            skills={skillsT}
+            imgSkills={imagesT}
             />
           <Box title={"Other Passions"} index='3'
             toggleOpen={this.toggleOpen}
-            skills={this.state.skillsO}
-            imgSkills={this.state.imagesO}
+            skills={skillsO}
+            imgSkills={imagesO}
             />
         </div>
 
