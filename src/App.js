@@ -18,11 +18,7 @@ class App extends Component {
         <div className='Content'>
           <NavBar />
           <WelcomePage />
-          <TextScrollX
-            coeffPage={.8}
-            direction='toLeft'
-            name='Presentation'
-            text='I am Yveline, a passionate React Front-End Developer.'/>
+          <TextScrollX />
           <BrandStatement />
           <Skills />
           <Projects />

@@ -49,7 +49,7 @@ class Project extends Component {
 
   onResize = (event) => {
     const { id } = this.props;
-    if (window.innerWidth > 611) {
+    if (window.innerWidth > 600) {
       if (id % 2 === 0) {
         this.project.style.flexDirection = 'row';
       } else {

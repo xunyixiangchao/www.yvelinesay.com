@@ -14,8 +14,6 @@
         height: 420px;
         padding: 50px;
         display: flex;
-        justify-content: center;
-        align-items: center;
         font-weight: bold;
         background-color: transparent;
         position: relative;
@@ -26,7 +24,6 @@
         .appearBrandStat {
           animation: fadein 1s;
           display: flex;
-          justify-content: center;
         }
 
             .mypicDiv {
@@ -43,68 +40,167 @@
                 .mypic {
                   width: 100%;
                   height: auto;
-                  filter: brightness(60%);
+                  filter: drop-shadow(16px 0 0 rgb(25,74,122));
                 }
 
             .brandStatementPContainer {
               display: flex;
+              flex-direction: column;
               justify-content: center;
-              align-items: center;
+              align-items: flex-start;
               padding-bottom: 30px;
+              line-height: 40px;
+              font-size: 22px;
+              text-align: justify;
             }
 
                 .brandStatementP {
-                  margin: 0 auto;
-                  text-align: justify;
-                  line-height: 40px;
-                  font-size: 22px;
+                  width: 100%;
                 }
 
-/* @media screen and (max-width: 850px) {
+                .brandStatementM {
+                  width: 450px;
+                }
+
+@media screen and (max-width: 1000px) {
   .BrandStatement {
-    max-width: 90%;
-  }
-
-  .appearBrandStat {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-      .brandStatementPContainer {
-        margin-top: 30px;
-        width: 100%;
-      }
-
-          .brandStatementP {
-            font-size: 16px;
-            line-height: 35px;
-          }
-
-}
-
-@media screen and (max-width: 640px) {
-  .BrandStatement {
-    padding-top: 13vh;
+    border: 10px solid #FFC400;
   }
 
       .mypicDiv {
-        width: 40%;
+        bottom: 100px;
+        right: -122px;
+        transform: rotate(-90deg);
       }
 
-      .brandStatementP {
-        font-size: 14px;
-        line-height: 27px;
+          .mypic {
+            filter: drop-shadow(16px 0 0 #FFC400);
+          }
+
+      .brandStatementPContainer {
+        line-height: 38px;
+        padding-bottom: 20px;
       }
+
+          .brandStatementP {
+            width: 70%;
+          }
+
+          .brandStatementM {
+            width: 70%;
+          }
+}
+
+@media screen and (max-width: 800px) {
+    .mypicDiv {
+      bottom: 0;
+      left: -60px;
+      width: 450px;
+    }
+
+        .mypic {
+          transform: rotate(90deg);
+          filter: drop-shadow(16px 0 0 #FFC400);
+        }
+
+  .BrandStatement {
+    border: 7px solid #FFC400;
+    margin: 13px;
+    padding: 40px;
+  }
+
+      .brandStatementPContainer {
+        padding-bottom: 30px;
+        line-height: 40px;
+        font-size: 20px;
+        align-items: flex-end;
+      }
+
+          .brandStatementP {
+            width: 100%;
+          }
+
+          .brandStatementM {
+            text-align: right;
+            width: 65%;
+          }
+}
+
+@media screen and (max-width: 700px) {
+  .brandStatementPContainer {
+    padding-bottom: 30px;
+    line-height: 30px;
+  }
+
+  .brandStatementM {
+    text-align: right;
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .brandStatementPContainer {
+    line-height: 25px;
+    font-size: 17px;
+  }
+
+  .brandStatementM {
+    text-align: right;
+    width: 35%;
+    padding-top: 18px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .mypicDiv {
+    width: 350px;
+    left: -88px;
+    bottom: 50px;
+  }
+
+      .mypic {
+        transform: rotate(180deg);
+      }
+
+  .brandStatementPContainer {
+    line-height: 20px;
+    font-size: 17px;
+  }
+
+  .brandStatementM {
+    text-align: right;
+    width: 60%;
+    padding-top: 70px;
+  }
 }
 
 @media screen and (max-width: 400px) {
-
-  .mypicDiv {
-    width: 50%;
+  #about-me {
+    height: auto;
   }
 
-  .brandStatementP {
-    line-height: 25px;
-  }
-} */
+      .BrandStatement {
+        padding: 20px;
+      }
+
+      .mypicDiv {
+        width: 300px;
+        left: 70px;
+        bottom: 0;
+      }
+            .mypic {
+              transform: rotate(90deg);
+            }
+
+      .brandStatementPContainer {
+        line-height: 23px;
+        font-size: 15px;
+        align-items: flex-start;
+      }
+
+          .brandStatementM {
+            width: 40%;
+            padding-top: 0;
+            text-align: left;
+          }
+}

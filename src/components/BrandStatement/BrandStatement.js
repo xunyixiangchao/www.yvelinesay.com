@@ -37,7 +37,12 @@ class BrandStatement extends Component {
       <div id='about-me' ref={element => this.aboutmeContainer = element}>
           <div className={`BrandStatement ${appeared ? 'appearBrandStat' : 'hide'}`}>
             <div className='mypicDiv'>
-               <img className='mypic' src='/images/profile-picture-blue.png' alt=' '/>
+               { window.innerWidth >= 800 &&
+                 <img className='mypic' src='/images/profile-picture-bw2.png' alt=' '/>
+               }
+               { window.innerWidth < 800 &&
+                 <img className='mypic' src='/images/profile-picture-bw.png' alt=' '/>
+               }
             </div>
             <div className='brandStatementPContainer'>
               <p className='brandStatementP'>
@@ -45,8 +50,10 @@ class BrandStatement extends Component {
                   to be focused, organized and to work with others. My fascination for technical skills, and more specifically for logical
                   problem solving, lead me to changing careers and becoming a web developer. I am described by others as determined,
                   fast-learner and lively minded. I am someone with a strong desire for a challenge, who does what she is passionate about
-                with a lot of motivation and precision. <br /><br />
-                My motto is that anything in life can be reached with<br />
+                with a lot of motivation and precision.
+              </p>
+              <p className='brandStatementM'>
+                My motto is that anything in life can be reached with
                 work, patience, collaboration and positive energy.
               </p>
             </div>
