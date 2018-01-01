@@ -1,56 +1,66 @@
 #about-me {
   width: 100%;
-  min-height: 100vh;
+  height: 650px;
+  position: relative;
+  background-color: white;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: relative;
-  background-image: url("/images/webdev3.jpeg");
-  background-size: cover;
+  padding-bottom: 60px;
 }
 
-    .BrandStatement {
-      max-width: 78%;
-      margin: 0 auto;
-      color: black;
-      text-shadow: 1px 1px 1px white;
-    }
+      .BrandStatement {
+        width: 820px;
+        height: 420px;
+        padding: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        background-color: transparent;
+        position: relative;
+        border: 10px solid rgb(25,74,122);
+        color: rgb(25,74,122);
+      }
 
-    .appearBrandStat {
-      animation: fadein 1s;
-      display: flex;
-      justify-content: space-between;
-    }
-
-        .mypicDiv {
-          width: 30%;
+        .appearBrandStat {
+          animation: fadein 1s;
           display: flex;
           justify-content: center;
-          align-items: center;
         }
 
-            .mypic {
-              width: 100%;
-              border-radius: 7px;
+            .mypicDiv {
+              height: auto;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              position: absolute;
+              bottom: 0;
+              right: 0;
+              width: 500px;
             }
 
+                .mypic {
+                  width: 100%;
+                  height: auto;
+                  filter: brightness(60%);
+                }
 
-        .brandStatementPContainer {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          width: 60%;
-        }
-
-            .brandStatementP {
-              margin: 0 auto;
-              text-align: justify;
-              line-height: 35px;
-              font-size: 18px;
+            .brandStatementPContainer {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              padding-bottom: 30px;
             }
 
-@media screen and (max-width: 850px) {
+                .brandStatementP {
+                  margin: 0 auto;
+                  text-align: justify;
+                  line-height: 40px;
+                  font-size: 22px;
+                }
+
+/* @media screen and (max-width: 850px) {
   .BrandStatement {
     max-width: 90%;
   }
@@ -97,4 +107,4 @@
   .brandStatementP {
     line-height: 25px;
   }
-}
+} */

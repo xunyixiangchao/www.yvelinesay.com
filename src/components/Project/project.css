@@ -1,5 +1,6 @@
 .ProjectContainer {
   width: 100%;
+  min-height: 200px;
   position: relative;
   padding-top: 6vh;
 }
@@ -23,6 +24,7 @@
           justify-content: center;
           align-items: center;
           pointer-events: none;
+          padding-right: 20px;
         }
 
             .imageProject {
@@ -38,12 +40,12 @@
           display: flex;
           justify-content: center;
           align-items: flex-start;
+          padding-left: 20px;
         }
 
             .ProjectText {
               height: 80%;
               width: 80%;
-              padding-left: 10%;
               margin: 0 auto;
               display: flex;
               flex-direction: column;
@@ -91,31 +93,41 @@
                 }
 
                     .linkToProject {
+                      background-color: transparent;
+                      transition: .2s;
                       padding: 15px;
                       margin-right: 10px;
                       border-radius: 4px;
-                      color: white;
-                      font-size: 13px;
+                      color: black;
+                      font-size: 12px;
                       text-align: center;
+                      letter-spacing: 2px;
+                      font-weight: 800;
                     }
                         .linkToProject:hover {
-                          color: white;
+                          background-color: transparent;
+                          transition: .2s;
+                          color: black;
                         }
 
                             .linkToProject.github {
-                              background-color: rgba(37,41,46,.7);
+                              border: 3px solid rgb(37,41,46);
+                              box-shadow: 4px 4px 0 rgb(37,41,46);
                             }
                                 .linkToProject.github:hover {
-                                  background-color: rgba(37,41,46,1);
+                                  box-shadow: none;
+                                  transform: translate3d(4px, 4px, 0);
                                 }
                             .linkToProject.web {
-                              background-color: rgba(0,0,250,.7);
+                              border: 3px solid rgb(25,74,122);
+                              box-shadow: 4px 4px 0 rgb(25,74,122);
                             }
                                 .linkToProject.web:hover {
-                                  background-color: rgba(0,0,250,1);
+                                  box-shadow: none;
+                                  transform: translate3d(4px, 4px, 0);
                                 }
 
-@media screen and (max-width: 740px) {
+/* @media screen and (max-width: 740px) {
   .ProjectText{
     max-height: 40vh;
   }
@@ -174,4 +186,4 @@
                   margin: 10px 0;
                 }
 
-}
+} */

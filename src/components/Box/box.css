@@ -1,7 +1,5 @@
 .BoxContainer {
-  border: 3px solid white;
-  border-radius: 10px;
-  margin-bottom: 20px;
+  margin: 5px;
   padding: 50px 0;
   overflow: hidden;
   height: 400px;
@@ -40,7 +38,7 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      
+
       position: relative;
       text-align: center;
     }
@@ -78,12 +76,13 @@
 .BoxTitle {
   text-align: center;
   position: absolute;
+  font-family: 'Anton', sans-serif;
 
   /*avoid word crop*/
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  font-size: 40px;
+  font-size: 50px;
 
   /*soumis à animations*/
   font-weight: normal;
@@ -100,7 +99,8 @@
 
 .BoxContainer.open .BoxTitle {
   font-weight: 900;
-  top: 25px;
+  top: 0;
+  color: white;
   transform: rotate(0);
   letter-spacing: 2px;
   transition:
@@ -111,21 +111,8 @@
     letter-spacing 1s;
 }
 
-      .BoxContainer0 .BoxTitle, .BoxContainer1 .BoxTitle, .BoxContainer3 .BoxTitle {
+      .BoxContainer0 .BoxTitle, .BoxContainer1 .BoxTitle, .BoxContainer2 .BoxTitle, .BoxContainer3 .BoxTitle {
         color: white;
-      }
-
-      .BoxContainer0.open .BoxTitle {
-        color: rgb(87,115,65);
-      }
-      .BoxContainer1.open .BoxTitle {
-        color: rgb(191,140,30);
-      }
-      .BoxContainer2.open .BoxTitle {
-        color: rgb(185,28,24);
-      }
-      .BoxContainer3.open .BoxTitle {
-        color: #29617D;
       }
 
 .skillContainer {
@@ -141,7 +128,7 @@
 }
 
   .skill {
-    margin: 20px;
+    margin: 10px 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -150,13 +137,14 @@
 
     .skillTitle {
       font-size: 20px;
+      padding-bottom: 15px;
       text-align: center;
-      color: #97A4A8;
+      color: white;
     }
 
     .skillImage img {
-      max-width: 90px;
-      max-height: 45px;
+      max-width: 150px;
+      max-height: 75px;
     }
 
 @media screen and (max-width: 850px) {

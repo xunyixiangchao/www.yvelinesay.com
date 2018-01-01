@@ -1,38 +1,66 @@
 .NavBar {
-  width: 100%;
-  position: absolute;
-  top: 90vh;
-  background: -webkit-linear-gradient(rgba(255,255,255, 1), rgba(255,255,255,.7));
-  background: -o-linear-gradient(rgba(255,255,255,1), rgba(255,255,255,.7));
-  background: -moz-linear-gradient(rgba(255,255,255,1), rgba(255,255,255,.7));
-  background: linear-gradient(rgba(255,255,255,1), rgba(255,255,255,.7));
-  z-index: 3;
-}
-
-.NavBarContainer {
-  max-width: 78%;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 10vh;
-}
-
-.navItem {
-  transform: rotate(0deg);
-  transition: 1s;
-  font-size: 17px;
-  margin: 3px 0;
-}
-
-.navItem:hover{
-  color: #97A4A8;
-}
-
-.NavBarFixed {
   position: fixed;
-  top: 0;
+  right: 0px;
+  top: 43vh;
+  width: 170px;
+  font-weight: bold;
+  z-index: 3;
+  color: white;
 }
+  .NavBaropened {
+    transition: .5s;
+    transform: translateX(0px);
+  }
+  .NavBarclosed {
+    transition: .5s;
+    transform: translateX(88px);
+  }
+
+    .NavBarContainer {
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+        .NavDisplay {
+          background-color: black;
+          border-radius: 50%;
+          width: 35px;
+          height: 35px;
+          padding: 10px 10px 10px 15px;
+          transform: translateX(55px);
+          display: flex;
+          align-items: center;
+        }
+
+            .NavDisplay img {
+              z-index: 4;
+              width: 10px;
+              height: 16px;
+            }
+
+        .NavItems {
+          transform: rotate(0deg);
+          transition: 1s;
+          font-size: 15px;
+          margin: 3px 0;
+          background-color: black;
+          padding: 15px;
+          height: 14vh;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+        }
+
+          .navItem a{
+            color: white;
+          }
+
+          .navItem a:hover{
+            color: #97A4A8;
+          }
 
 @media screen and (max-width: 400px) {
   .navItem {

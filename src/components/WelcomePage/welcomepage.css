@@ -1,0 +1,55 @@
+.WelcomePageContent {
+  width: 100%;
+  height: 90vh;
+  /* background-image: url('/images/backgrounds/greeting.jpeg');
+  background-size: cover; */
+  background-color: black;
+  pointer-events: none;
+  position: relative;
+  font-family: 'Anton', sans-serif;
+}
+
+    .WelcomePage {
+      max-width: 940px;
+      height: 100%;
+      margin: 0 auto;
+      animation: fadein1 3s;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-end;
+      color: white;
+      font-size: 100px;
+    }
+
+        .greetingsContent {
+          display: flex;
+        }
+
+            .firstLetter {
+              transform: rotate(-90deg);
+              letter-spacing: 35px;
+            }
+
+            .otherLetters {
+              padding-right: 10px;
+            }
+
+/* @media screen and (max-width: 640px) {
+  .basicInfoP {
+    font-size: 14px;
+  }
+
+  .basicInfoGreeting {
+    font-size: 70px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .basicInfoP {
+    font-size: 12px;
+  }
+
+  .basicInfoGreeting {
+    font-size: 50px;
+  }
+} */

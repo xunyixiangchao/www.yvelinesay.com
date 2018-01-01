@@ -4,7 +4,7 @@
               rgba(255,255,255,1)), url('/images/contactpic.png');
   background-size: cover;
   padding-top: 13vh;
-  height: 73vh;
+  height: 30vh;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -27,41 +27,30 @@
       align-items: center;
     }
 
-        .HireMe {
-          display: flex;
-          flex-direction: column;
-          padding-top: 20vh;
-        }
-
-            .HireMeEn, .HireMeFr {
-              width: 100%;
-              text-align: center;
-            }
-
-                .HireMeEn {
-                  font-size: 20px;
-                }
-
-                .HireMeFr {
-                  font-size: 16px;
-                }
-
-        .SayHello {
-          padding-top: 10vh;
-          font-size: 25px;
-          text-align: center;
-        }
-
         .ContactIconsContainer {
-          width: 50%;
+          width: 70%;
           display: flex;
           justify-content: space-between;
-          padding-bottom: 20vh;
         }
 
-            .contactIcon {
-              width: 40px;
+            .ContactIconDiv {
+              width: 100px;
+              height: 100px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
             }
+
+                .contactIcon {
+                  transition: .2s;
+                  width: 40px;
+                  filter: grayscale(100%) brightness(50%);
+                }
+                .contactIcon:hover {
+                  transition: .2s;
+                  width: 50px;
+                  filter: grayscale(0%) brightness(100%);
+                }
 
 @media screen and (max-width: 640px) {
   #ContactContainer {

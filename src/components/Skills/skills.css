@@ -1,13 +1,13 @@
 #passions {
   width: 100%;
-  background-color: rgb(250,250,250);
+  min-height: 60vh;
+  background-color: rgb(25,74,122);
   padding: 15vh 0;
   position: relative;
 }
 
 .Skills {
-  max-width: 800px;
-  width: 100%;
+  width: 95%;
   margin: 0 auto;
 }
 

@@ -1,37 +1,33 @@
 import React, { Component } from 'react';
-import AboutMe from "./components/AboutMe/AboutMe";
-import Skills from "./components/Skills/Skills";
-import Projects from "./components/Projects/Projects";
-import Contact from "./components/Contact/Contact";
-import Footer from "./components/Footer/Footer";
-import Credits from "./components/Credits/Credits";
+
+import NavBar from './components//NavBar/NavBar';
+import WelcomePage from './components/WelcomePage/WelcomePage';
+import TextScrollX from './components/TextScrollX/TextScrollX';
+import BrandStatement from './components/BrandStatement/BrandStatement';
+import Skills from './components/Skills/Skills';
+import Projects from './components/Projects/Projects';
+import Contact from './components/Contact/Contact';
+import Footer from './components/Footer/Footer';
+// import Credits from './components/Credits/Credits';
 import './App.css';
 
 class App extends Component {
-  state = {
-    credits:false
-  }
-
-  toggleCredits = () => {
-    const { credits } = this.state;
-    credits ? this.setState({credits:false}) : this.setState({credits:true})
-  }
-
   render() {
-    const { credits } = this.state;
     return (
-      <div className="App">
-        <div className="Content">
-          <AboutMe />
+      <div className='App'>
+        <div className='Content'>
+          <NavBar />
+          <WelcomePage />
+          <TextScrollX
+            coeffPage={.8}
+            direction='toLeft'
+            name='Presentation'
+            text='I am Yveline, a passionate React Front-End Developer.'/>
+          <BrandStatement />
           <Skills />
           <Projects />
           <Contact />
-          <Footer
-            toggleCredits={this.toggleCredits}
-            credits={credits} />
-            {credits &&
-              <Credits />
-            }
+          <Footer />
         </div>
       </div>
     );

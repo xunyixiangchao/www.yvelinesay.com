@@ -3,41 +3,34 @@ import './navbar.css';
 
 class NavBar extends Component {
   state = {
-    isFixed: false
+    open: false
   }
 
-  componentWillMount() {
-    document.addEventListener('scroll', this.onScroll);
-  }
-
-  componentWillUnmount() {
-    document.removeEventListener('scroll', this.onScroll);
-  }
-
-  onScroll = (event) => {
-    const { isFixed } = this.state;
-    const top = window.pageYOffset || document.documentElement.scrollTop;
-
-    if ((top > window.innerHeight * 0.9) && !isFixed) {
-      this.setState({
-        isFixed: true
-      })
-    } else if (top <= window.innerHeight * 0.9 && isFixed) {
-      this.setState({
-        isFixed: false
-      })
-    }
+  toggleOpen = () => {
+    this.setState({
+      open: !this.state.open
+    })
   }
 
   render() {
-    const { isFixed } = this.state;
+    const { open } = this.state;
     return (
-      <div className={`NavBar ${isFixed ? "NavBarFixed" : ""} `}>
-        <div className="NavBarContainer">
-          <div className="navItem" onClick={this.onClickSmooth}><a href="#about-me">about me</a></div>
-          <div className="navItem" onClick={this.onClickSmooth}><a href="#passions">passions</a></div>
-          <div className="navItem" onClick={this.onClickSmooth}><a href="#projects">projects</a></div>
-          <div className="navItem" onClick={this.onClickSmooth}><a href="#contact">contact</a></div>
+      <div className={`NavBar NavBar${open ? 'opened' : 'closed'}`}>
+        <div className='NavBarContainer'>
+          <div onClick={this.toggleOpen}className='NavDisplay'>
+            {!open &&
+              <img alt='<' src='/images/arrowleft.png'/>
+            }
+            {open &&
+              <img alt='>' src='/images/arrowright.png'/>
+            }
+          </div>
+          <div className='NavItems'>
+            <div className='navItem' onClick={this.onClickSmooth}><a href='#about-me'>about me</a></div>
+            <div className='navItem' onClick={this.onClickSmooth}><a href='#passions'>passions</a></div>
+            <div className='navItem' onClick={this.onClickSmooth}><a href='#projects'>projects</a></div>
+            <div className='navItem' onClick={this.onClickSmooth}><a href='#contact'>contact</a></div>
+          </div>
         </div>
       </div>
     );

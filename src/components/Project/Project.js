@@ -9,36 +9,48 @@ class Project extends Component {
   }
 
   static propTypes = {
-    color: PropTypes.string.isRequired,
-    top: PropTypes.number.isRequired,
-    technology: PropTypes.array.isRequired,
+    id: PropTypes.number.isRequired,
     title: PropTypes.string.isRequired,
+    technology: PropTypes.array.isRequired,
     description: PropTypes.string.isRequired,
     linkToGit: PropTypes.string.isRequired,
     linkToWeb: PropTypes.string.isRequired,
     image: PropTypes.string.isRequired,
+    color: PropTypes.string.isRequired,
   }
 
   componentWillMount() {
-    document.addEventListener('scroll', this.onScroll);
     window.addEventListener('resize', this.onResize);
+    window.addEventListener('scroll', this.isAppeared);
   }
 
   componentWillUnmount() {
-    document.removeEventListener('scroll', this.onSrcoll);
     window.removeEventListener('resize', this.onResize);
+    window.removeEventListener('scroll', this.isAppeared);
   }
 
   componentDidMount() {
     const { color } = this.props;
     this.projectContainer.style.backgroundColor = color;
     this.onResize();
+    this.isAppeared();
+  }
+
+  isAppeared = () => {
+    const { referenceTop } = this.props;
+    const windowSize = window.innerHeight;
+    const topPage = document.documentElement.scrollTop;
+    if ( topPage >= ((referenceTop + this.projectContainer.offsetTop) - (windowSize/1.5)) ) {
+      this.setState({
+        appeared: true
+      })
+    }
   }
 
   onResize = (event) => {
-    const { top } = this.props;
+    const { id } = this.props;
     if (window.innerWidth > 611) {
-      if (top % 2 === 0) {
+      if (id % 2 === 0) {
         this.project.style.flexDirection = 'row';
       } else {
         this.project.style.flexDirection = 'row-reverse';
@@ -46,15 +58,7 @@ class Project extends Component {
     } else {
         this.project.style.flexDirection = 'column-reverse';
     }
-  }
-
-  onScroll = (event) => {
-    const { top } = this.props;
-    const topPage = window.pageYOffset || document.documentElement.scrollTop;
-    const appear = (window.innerHeight * (2.2 + (top * 0.6)));
-    if ((topPage > appear) && (!this.state.appeared)) {
-      this.setState({ appeared: true })
-    }
+    this.isAppeared();
   }
 
   renderTechnology = () => {
@@ -71,7 +75,7 @@ class Project extends Component {
 
   render() {
     const { appeared } = this.state;
-    const { title, description, linkToGit, linkToWeb, image, top, color } = this.props;
+    const { title, description, linkToGit, linkToWeb, image, color, id } = this.props;
     return (
       <div className="ProjectContainer" ref={element => this.projectContainer = element}>
           <div className={`Project ${appeared ? 'appearedProject' : 'hide'}`} ref={element => this.project = element}>
@@ -98,7 +102,7 @@ class Project extends Component {
           <Separator
             positionPage="On"
             positionSeparator="-6vh"
-            rightAngle={top%2===0?'Right':'Left'}
+            rightAngle={id%2===0?'Right':'Left'}
             color={color}
             />
       </div>

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Separator from '../Separator/Separator';
 import './brandstatement.css';
 
 class BrandStatement extends Component {
@@ -6,18 +7,24 @@ class BrandStatement extends Component {
     appeared: false
   }
 
+  componentDidMount() {
+    this.isAppeared();
+  }
+
   componentWillMount() {
-    document.addEventListener('scroll', this.onScroll);
+    window.addEventListener('resize', this.isAppeared);
+    window.addEventListener('scroll', this.isAppeared);
   }
 
   componentWillUnmount() {
-    document.removeEventListener('scroll', this.onScroll);
+    window.removeEventListener('resize', this.isAppeared);
+    window.removeEventListener('scroll', this.isAppeared);
   }
 
-  onScroll = (event) => {
-    const top  = window.pageYOffset || document.documentElement.scrollTop;
-
-    if ((top > window.innerHeight * 0.2) && (!this.state.appeared)) {
+  isAppeared = () => {
+    const topPage = document.documentElement.scrollTop;
+    const windowSize = window.innerHeight;
+    if ( topPage >= (this.aboutmeContainer.offsetTop - (windowSize/1.5))) {
       this.setState({
         appeared: true
       })
@@ -25,26 +32,31 @@ class BrandStatement extends Component {
   }
 
   render() {
+    const { appeared } = this.state;
     return (
-      <div id='about-me'>
-        <div className={`BrandStatement ${this.state.appeared ? 'appearBrandStat' : 'hide'}`}>
-
-          <div className='mypicDiv'>
-            <img className='mypic' src='/images/me.jpg' alt=' '/>
-          </div>
-          <div className='brandStatementPContainer'>
-            <p className='brandStatementP'>
-              My background in corporate real estate strategy and team management has taught me how
-                to be focused, organized and to work with others. My fascination for technical skills, and more specifically for logical
-                problem solving, lead me to changing careers and becoming a web developer. I am described by others as determined,
-                fast-learner and lively minded. I am someone with a strong desire for a challenge, who does what she is passionate about
-              with a lot of motivation and precision. <br />
-              My motto is that anything in life can be reached with work, patience, collaboration and positive energy.
-            </p>
-          </div>
-
+      <div id='about-me' ref={element => this.aboutmeContainer = element}>
+          <div className={`BrandStatement ${appeared ? 'appearBrandStat' : 'hide'}`}>
+            <div className='mypicDiv'>
+               <img className='mypic' src='/images/profile-picture-blue.png' alt=' '/>
+            </div>
+            <div className='brandStatementPContainer'>
+              <p className='brandStatementP'>
+                My background in corporate real estate strategy and team management has taught me how
+                  to be focused, organized and to work with others. My fascination for technical skills, and more specifically for logical
+                  problem solving, lead me to changing careers and becoming a web developer. I am described by others as determined,
+                  fast-learner and lively minded. I am someone with a strong desire for a challenge, who does what she is passionate about
+                with a lot of motivation and precision. <br /><br />
+                My motto is that anything in life can be reached with<br />
+                work, patience, collaboration and positive energy.
+              </p>
+            </div>
         </div>
-
+        <Separator
+          positionPage='Bottom'
+          positionSeparator='0'
+          rightAngle='Left'
+          color='rgb(25,74,122)'
+        />
       </div>
     );
   }
