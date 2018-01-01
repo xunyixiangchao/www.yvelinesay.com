@@ -100,7 +100,7 @@
 
         .mypic {
           transform: rotate(90deg);
-          filter: drop-shadow(16px 0 0 #FFC400);
+          filter: drop-shadow(16px 0 0 rgb(25,74,122));
         }
 
   .BrandStatement {
@@ -159,6 +159,7 @@
   }
 
       .mypic {
+        filter: drop-shadow(16px 0 0 #FFC400);
         transform: rotate(180deg);
       }
 
