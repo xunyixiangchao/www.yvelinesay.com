@@ -33,7 +33,7 @@ class Contact extends Component {
   render() {
     const { appeared } = this.state;
     return (
-      <div id='contact' ref={element => this.contactContainer = element}>>
+      <div id='contact' ref={element => this.contactContainer = element}>
         <div className={`Contact ${appeared ? 'appearContact' : 'hide'}`}>
           <div className='ContactIconsContainer'>
             <div className='ContactIconDiv LinkedIn'>

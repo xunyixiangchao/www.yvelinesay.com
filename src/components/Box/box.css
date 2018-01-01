@@ -229,21 +229,3 @@
             max-height: 45px;
           }
 }
-
-/* @media screen and (max-width: 640px) {
-  .BoxTitle {
-    font-size: 25px;
-  }
-  .skillTitle {
-    font-size: 15px;
-  }
-}
-
-@media screen and (max-width: 550px) {
-  .BoxTitle {
-    font-size: 20px;
-  }
-  .skill {
-    margin: 10px;
-  }
-} */
