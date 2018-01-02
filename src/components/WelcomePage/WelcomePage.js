@@ -23,17 +23,24 @@ class WelcomePage extends Component {
 
   displayGreetingsScroll = () => {
     const topPage = window.pageYOffset || document.documentElement.scrollTop;
+    
     const refHeight = this.WelcomePageContent.offsetHeight*.2;
     const percentageRotation = (topPage / refHeight) * 100;
-
-    const degreeRotation = (percentageRotation/100*90)-90;
-    const degreeSpacing = (percentageRotation/100*-34);
     
-    this.firstLetter.forEach(element => {element.style.transform = `rotate(${degreeRotation}deg)`});
-    this.otherLetters.forEach(element => {element.style.transform = `translateX(${degreeSpacing}px)`});
+    const refHeight2 = this.WelcomePageContent.offsetHeight*.1;
+    const percentageRotation2 = (topPage / refHeight2) * 100;
 
+    const degreeRotation = (percentageRotation2/100*90)-90;
+    const pxSpacing = (percentageRotation/100*-34);
+    const bottomPx = (percentageRotation2/100*-13)+13;
+
+    this.firstLetter.forEach(element => {element.style.transform = `rotate(${degreeRotation}deg) translateX(${bottomPx}px)`});
+    this.otherLetters.forEach(element => {element.style.transform = `translateX(${pxSpacing}px)`});
+
+    if (topPage >= refHeight2) {
+      this.firstLetter.forEach(element => {element.style.transform = `rotate(0deg) translateX(0px)`});
+    }
     if (topPage >= refHeight) {
-      this.firstLetter.forEach(element => {element.style.transform = `rotate(0deg)`});
       this.otherLetters.forEach(element => {element.style.transform = `translateX(-34px)`});
     }
   }
