@@ -31,7 +31,7 @@ class Skills extends Component {
   }
 
   isAppeared = () => {
-    const topPage = document.documentElement.scrollTop;
+    const topPage = window.pageYOffset || document.documentElement.scrollTop;
     const windowSize = window.innerHeight;
     if ( topPage >= (this.passionsContainer.offsetTop - (windowSize/1.5))) {
       this.setState({

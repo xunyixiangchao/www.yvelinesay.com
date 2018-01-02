@@ -21,7 +21,7 @@ class Contact extends Component {
   }
 
   isAppeared = () => {
-    const topPage = document.documentElement.scrollTop;
+    const topPage = window.pageYOffset || document.documentElement.scrollTop;
     const windowSize = window.innerHeight;
     if ( topPage >= (this.contactContainer.offsetTop - (windowSize/1.5))) {
       this.setState({

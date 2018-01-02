@@ -39,7 +39,7 @@ class Project extends Component {
   isAppeared = () => {
     const { referenceTop } = this.props;
     const windowSize = window.innerHeight;
-    const topPage = document.documentElement.scrollTop;
+    const topPage = window.pageYOffset || document.documentElement.scrollTop;
     if ( topPage >= ((referenceTop + this.projectContainer.offsetTop) - (windowSize/1.5)) ) {
       this.setState({
         appeared: true

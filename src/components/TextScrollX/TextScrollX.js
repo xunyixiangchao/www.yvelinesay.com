@@ -16,7 +16,7 @@ class TextScrollX extends Component {
 
   scrollX = () => {
     const windowHeight = window.innerHeight;
-    const topPage = document.documentElement.scrollTop;
+    const topPage = window.pageYOffset || document.documentElement.scrollTop;
 
     let textScrollPos = 1-(topPage/(windowHeight*.8));
 

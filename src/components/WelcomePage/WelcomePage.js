@@ -22,13 +22,13 @@ class WelcomePage extends Component {
   }
 
   displayGreetingsScroll = () => {
-    const topPage = document.documentElement.scrollTop;
+    const topPage = window.pageYOffset || document.documentElement.scrollTop;
     const refHeight = this.WelcomePageContent.offsetHeight*.2;
     const percentageRotation = (topPage / refHeight) * 100;
 
     const degreeRotation = (percentageRotation/100*90)-90;
     const degreeSpacing = (percentageRotation/100*-34);
-
+    
     this.firstLetter.forEach(element => {element.style.transform = `rotate(${degreeRotation}deg)`});
     this.otherLetters.forEach(element => {element.style.transform = `translateX(${degreeSpacing}px)`});
 
