@@ -153,8 +153,8 @@
 
 @media screen and (max-width: 500px) {
   .mypicDiv {
-    width: 350px;
-    left: -88px;
+    width: 335px;
+    left: -85px;
     bottom: 50px;
   }
 
@@ -164,18 +164,19 @@
       }
 
   .brandStatementPContainer {
-    line-height: 20px;
+    line-height: 22px;
     font-size: 17px;
+    padding-bottom: 50px;
   }
 
   .brandStatementM {
-    text-align: right;
-    width: 60%;
+    text-align: center;
+    width: 70%;
     padding-top: 70px;
   }
 }
 
-@media screen and (max-width: 415px) {
+@media screen and (max-width: 422px) {
   #about-me {
     height: auto;
   }
@@ -197,11 +198,44 @@
         line-height: 23px;
         font-size: 15px;
         align-items: flex-start;
+        padding-bottom: 0;
       }
 
           .brandStatementM {
             width: 40%;
-            padding-top: 0;
+            padding-top: 20px;
             text-align: left;
+          }
+}
+
+@media screen and (max-width: 378px) {
+  #about-me {
+    height: auto;
+  }
+
+      .BrandStatement {
+        padding: 20px;
+      }
+
+      .mypicDiv {
+        width: 200px;
+        left: -50px;
+        bottom: 30px;
+      }
+            .mypic {
+              filter: drop-shadow(8px 0 0 rgb(25,74,122));
+              transform: rotate(180deg);
+            }
+
+      .brandStatementPContainer {
+        line-height: 23px;
+        padding-bottom: 0;
+        align-items: flex-end;
+      }
+
+          .brandStatementM {
+            width: 75%;
+            padding-top: 20px;
+            text-align: right;
           }
 }
