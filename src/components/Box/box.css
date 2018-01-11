@@ -99,11 +99,13 @@
 
 .BoxContainer.open .BoxTitle {
   font-weight: 900;
+  top: 5%;
   transform: rotate(0);
   letter-spacing: 2px;
   transition:
     transform 1s,
     font-size 0.5s,
+    top 0.2s,
     letter-spacing 1s;
 }
 
